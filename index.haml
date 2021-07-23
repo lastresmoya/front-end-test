@@ -1,0 +1,1507 @@
+!!!
+%html.svgfilters.csscalc.cssgradients.preserve3d.supports.svgclippaths.svgasimg.no-touchevents.cssanimations.boxsizing.csstransforms.csstransforms3d.csstransitions.svg{:style => ""}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "Solved Preflop Ranges in Piosolver, MonkerSolver and through the web browser", :name => "Solved Preflop Holdem Poker Ranges."}/
+    %meta{:content => "b83TS9JXSg2H20f7CfIdr6rDuQUbFlcSie3AMpAtvns", :name => "google-site-verification"}/
+    %title No Limit Holdem & PLO Preflop Ranges | Range Converter
+    %meta{:content => "authenticity_token", :name => "csrf-param"}/
+    %meta{:content => "jc5iCtt0bPaVkbkmdKTkMzNXr0iO1uRfa3OScNx7jXiy+JW4x7fDj2QJw4N7Ei7OmjrlsuYngGVCtT3U4C0TQg==", :name => "csrf-token"}/
+    %link{"data-turbolinks-track" => "reload", :href => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/materialdesignicons.self-ca87a1c19c7e590639f6b841d00e8eceff32ee73a52b2000c16d50f8df6778ed.css", :media => "all", :rel => "stylesheet"}/
+    %link{"data-turbolinks-track" => "reload", :href => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/application.self-db6acdbcd79c16a0697adf4d26cdc37760f17e487ded49713a490fd411a5a0c4.css", :media => "all", :rel => "stylesheet"}/
+    :css
+      .jp-card.jp-card-safari.jp-card-identified .jp-card-front:before, .jp-card.jp-card-safari.jp-card-identified .jp-card-back:before {
+        background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 1px, rgba(255, 255, 255, 0) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(210deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), -webkit-linear-gradient(-245deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0) 90%);
+        background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 1px, rgba(255, 255, 255, 0) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(210deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), linear-gradient(-25deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0) 90%); }
+
+      .jp-card.jp-card-ie-10.jp-card-flipped, .jp-card.jp-card-ie-11.jp-card-flipped {
+        -webkit-transform: 0deg;
+        -moz-transform: 0deg;
+        -ms-transform: 0deg;
+        -o-transform: 0deg;
+        transform: 0deg; }
+        .jp-card.jp-card-ie-10.jp-card-flipped .jp-card-front, .jp-card.jp-card-ie-11.jp-card-flipped .jp-card-front {
+          -webkit-transform: rotateY(0deg);
+          -moz-transform: rotateY(0deg);
+          -ms-transform: rotateY(0deg);
+          -o-transform: rotateY(0deg);
+          transform: rotateY(0deg); }
+        .jp-card.jp-card-ie-10.jp-card-flipped .jp-card-back, .jp-card.jp-card-ie-11.jp-card-flipped .jp-card-back {
+          -webkit-transform: rotateY(0deg);
+          -moz-transform: rotateY(0deg);
+          -ms-transform: rotateY(0deg);
+          -o-transform: rotateY(0deg);
+          transform: rotateY(0deg); }
+          .jp-card.jp-card-ie-10.jp-card-flipped .jp-card-back:after, .jp-card.jp-card-ie-11.jp-card-flipped .jp-card-back:after {
+            left: 18%; }
+          .jp-card.jp-card-ie-10.jp-card-flipped .jp-card-back .jp-card-cvc, .jp-card.jp-card-ie-11.jp-card-flipped .jp-card-back .jp-card-cvc {
+            -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            -ms-transform: rotateY(180deg);
+            -o-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+            left: 5%; }
+          .jp-card.jp-card-ie-10.jp-card-flipped .jp-card-back .jp-card-shiny, .jp-card.jp-card-ie-11.jp-card-flipped .jp-card-back .jp-card-shiny {
+            left: 84%; }
+            .jp-card.jp-card-ie-10.jp-card-flipped .jp-card-back .jp-card-shiny:after, .jp-card.jp-card-ie-11.jp-card-flipped .jp-card-back .jp-card-shiny:after {
+              left: -480%;
+              -webkit-transform: rotateY(180deg);
+              -moz-transform: rotateY(180deg);
+              -ms-transform: rotateY(180deg);
+              -o-transform: rotateY(180deg);
+              transform: rotateY(180deg); }
+
+      .jp-card.jp-card-ie-10.jp-card-amex .jp-card-back, .jp-card.jp-card-ie-11.jp-card-amex .jp-card-back {
+        display: none; }
+
+      .jp-card-logo {
+        height: 36px;
+        width: 60px;
+        font-style: italic; }
+        .jp-card-logo, .jp-card-logo:before, .jp-card-logo:after {
+          box-sizing: border-box; }
+
+      .jp-card-logo.jp-card-amex {
+        text-transform: uppercase;
+        font-size: 4px;
+        font-weight: bold;
+        color: white;
+        background-image: repeating-radial-gradient(circle at center, #FFF 1px, #999 2px);
+        background-image: repeating-radial-gradient(circle at center, #FFF 1px, #999 2px);
+        border: 1px solid #EEE; }
+        .jp-card-logo.jp-card-amex:before, .jp-card-logo.jp-card-amex:after {
+          width: 28px;
+          display: block;
+          position: absolute;
+          left: 16px; }
+        .jp-card-logo.jp-card-amex:before {
+          height: 28px;
+          content: "american";
+          top: 3px;
+          text-align: left;
+          padding-left: 2px;
+          padding-top: 11px;
+          background: #267AC3; }
+        .jp-card-logo.jp-card-amex:after {
+          content: "express";
+          bottom: 11px;
+          text-align: right;
+          padding-right: 2px; }
+
+      .jp-card.jp-card-amex.jp-card-flipped {
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none; }
+
+      .jp-card.jp-card-amex.jp-card-identified .jp-card-front:before, .jp-card.jp-card-amex.jp-card-identified .jp-card-back:before {
+        background-color: #108168; }
+
+      .jp-card.jp-card-amex.jp-card-identified .jp-card-front .jp-card-logo.jp-card-amex {
+        opacity: 1; }
+
+      .jp-card.jp-card-amex.jp-card-identified .jp-card-front .jp-card-cvc {
+        visibility: visible; }
+
+      .jp-card.jp-card-amex.jp-card-identified .jp-card-front:after {
+        opacity: 1; }
+
+      .jp-card-logo.jp-card-discover {
+        background: #FF6600;
+        color: #111;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        text-align: center;
+        overflow: hidden;
+        z-index: 1;
+        padding-top: 9px;
+        letter-spacing: .03em;
+        border: 1px solid #EEE; }
+        .jp-card-logo.jp-card-discover:before, .jp-card-logo.jp-card-discover:after {
+          content: " ";
+          display: block;
+          position: absolute; }
+        .jp-card-logo.jp-card-discover:before {
+          background: white;
+          width: 200px;
+          height: 200px;
+          border-radius: 200px;
+          bottom: -5%;
+          right: -80%;
+          z-index: -1; }
+        .jp-card-logo.jp-card-discover:after {
+          width: 8px;
+          height: 8px;
+          border-radius: 4px;
+          top: 10px;
+          left: 27px;
+          background-color: #FF6600;
+          background-image: -webkit-radial-gradient(#FF6600, #fff);
+          background-image: radial-gradient(  #FF6600, #fff);
+          content: "network";
+          font-size: 4px;
+          line-height: 24px;
+          text-indent: -7px; }
+
+      .jp-card .jp-card-front .jp-card-logo.jp-card-discover {
+        right: 12%;
+        top: 18%; }
+
+      .jp-card.jp-card-discover.jp-card-identified .jp-card-front:before, .jp-card.jp-card-discover.jp-card-identified .jp-card-back:before {
+        background-color: #86B8CF; }
+
+      .jp-card.jp-card-discover.jp-card-identified .jp-card-logo.jp-card-discover {
+        opacity: 1; }
+
+      .jp-card.jp-card-discover.jp-card-identified .jp-card-front:after {
+        -webkit-transition: 400ms;
+        -moz-transition: 400ms;
+        transition: 400ms;
+        content: " ";
+        display: block;
+        background-color: #FF6600;
+        background-image: -webkit-linear-gradient(#FF6600, #ffa366, #FF6600);
+        background-image: linear-gradient(#FF6600, #ffa366, #FF6600);
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
+        position: absolute;
+        left: 100%;
+        top: 15%;
+        margin-left: -25px;
+        box-shadow: inset 1px 1px 3px 1px rgba(0, 0, 0, 0.5); }
+
+      .jp-card-logo.jp-card-visa {
+        background: white;
+        text-transform: uppercase;
+        color: #1A1876;
+        text-align: center;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 18px; }
+        .jp-card-logo.jp-card-visa:before, .jp-card-logo.jp-card-visa:after {
+          content: " ";
+          display: block;
+          width: 100%;
+          height: 25%; }
+        .jp-card-logo.jp-card-visa:before {
+          background: #1A1876; }
+        .jp-card-logo.jp-card-visa:after {
+          background: #E79800; }
+
+      .jp-card.jp-card-visa.jp-card-identified .jp-card-front:before, .jp-card.jp-card-visa.jp-card-identified .jp-card-back:before {
+        background-color: #191278; }
+
+      .jp-card.jp-card-visa.jp-card-identified .jp-card-logo.jp-card-visa {
+        opacity: 1; }
+
+      .jp-card-logo.jp-card-mastercard {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        font-size: 9px;
+        line-height: 36px;
+        z-index: 1;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.6); }
+        .jp-card-logo.jp-card-mastercard:before, .jp-card-logo.jp-card-mastercard:after {
+          content: " ";
+          display: block;
+          width: 36px;
+          top: 0;
+          position: absolute;
+          height: 36px;
+          border-radius: 18px; }
+        .jp-card-logo.jp-card-mastercard:before {
+          left: 0;
+          background: #FF0000;
+          z-index: -1; }
+        .jp-card-logo.jp-card-mastercard:after {
+          right: 0;
+          background: #FFAB00;
+          z-index: -2; }
+
+      .jp-card.jp-card-mastercard.jp-card-identified .jp-card-front .jp-card-logo.jp-card-mastercard, .jp-card.jp-card-mastercard.jp-card-identified .jp-card-back .jp-card-logo.jp-card-mastercard {
+        box-shadow: none; }
+
+      .jp-card.jp-card-mastercard.jp-card-identified .jp-card-front:before, .jp-card.jp-card-mastercard.jp-card-identified .jp-card-back:before {
+        background-color: #0061A8; }
+
+      .jp-card.jp-card-mastercard.jp-card-identified .jp-card-logo.jp-card-mastercard {
+        opacity: 1; }
+
+      .jp-card-logo.jp-card-maestro {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        font-size: 14px;
+        line-height: 36px;
+        z-index: 1;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.6); }
+        .jp-card-logo.jp-card-maestro:before, .jp-card-logo.jp-card-maestro:after {
+          content: " ";
+          display: block;
+          width: 36px;
+          top: 0;
+          position: absolute;
+          height: 36px;
+          border-radius: 18px; }
+        .jp-card-logo.jp-card-maestro:before {
+          left: 0;
+          background: #0064CB;
+          z-index: -1; }
+        .jp-card-logo.jp-card-maestro:after {
+          right: 0;
+          background: #CC0000;
+          z-index: -2; }
+
+      .jp-card.jp-card-maestro.jp-card-identified .jp-card-front .jp-card-logo.jp-card-maestro, .jp-card.jp-card-maestro.jp-card-identified .jp-card-back .jp-card-logo.jp-card-maestro {
+        box-shadow: none; }
+
+      .jp-card.jp-card-maestro.jp-card-identified .jp-card-front:before, .jp-card.jp-card-maestro.jp-card-identified .jp-card-back:before {
+        background-color: #0B2C5F; }
+
+      .jp-card.jp-card-maestro.jp-card-identified .jp-card-logo.jp-card-maestro {
+        opacity: 1; }
+
+      .jp-card-logo.jp-card-dankort {
+        width: 60px;
+        height: 36px;
+        padding: 3px;
+        border-radius: 8px;
+        border: #000000 1px solid;
+        background-color: #FFFFFF; }
+        .jp-card-logo.jp-card-dankort .dk {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          overflow: hidden; }
+          .jp-card-logo.jp-card-dankort .dk:before {
+            background-color: #ED1C24;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 6px; }
+          .jp-card-logo.jp-card-dankort .dk:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            margin-top: -7.7px;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7px 7px 10px 0;
+            border-color: transparent #ED1C24 transparent transparent;
+            z-index: 1; }
+        .jp-card-logo.jp-card-dankort .d, .jp-card-logo.jp-card-dankort .k {
+          position: absolute;
+          top: 50%;
+          width: 50%;
+          display: block;
+          height: 15.4px;
+          margin-top: -7.7px;
+          background: white; }
+        .jp-card-logo.jp-card-dankort .d {
+          left: 0;
+          border-radius: 0 8px 10px 0; }
+          .jp-card-logo.jp-card-dankort .d:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            background: #ED1C24;
+            border-radius: 2px 4px 6px 0px;
+            height: 5px;
+            width: 7px;
+            margin: -3px 0 0 -4px; }
+        .jp-card-logo.jp-card-dankort .k {
+          right: 0; }
+          .jp-card-logo.jp-card-dankort .k:before, .jp-card-logo.jp-card-dankort .k:after {
+            content: '';
+            position: absolute;
+            right: 50%;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            margin-right: -1px; }
+          .jp-card-logo.jp-card-dankort .k:before {
+            top: 0;
+            border-width: 8px 5px 0 0;
+            border-color: #ED1C24 transparent transparent transparent; }
+          .jp-card-logo.jp-card-dankort .k:after {
+            bottom: 0;
+            border-width: 0 5px 8px 0;
+            border-color: transparent transparent #ED1C24 transparent; }
+
+      .jp-card.jp-card-dankort.jp-card-identified .jp-card-front:before, .jp-card.jp-card-dankort.jp-card-identified .jp-card-back:before {
+        background-color: #0055C7; }
+
+      .jp-card.jp-card-dankort.jp-card-identified .jp-card-logo.jp-card-dankort {
+        opacity: 1; }
+
+      .jp-card-logo.jp-card-elo {
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        background: black;
+        color: white;
+        text-align: center;
+        text-transform: lowercase;
+        font-size: 21px;
+        font-style: normal;
+        letter-spacing: 1px;
+        font-weight: bold;
+        padding-top: 13px; }
+        .jp-card-logo.jp-card-elo .e, .jp-card-logo.jp-card-elo .l, .jp-card-logo.jp-card-elo .o {
+          display: inline-block;
+          position: relative; }
+        .jp-card-logo.jp-card-elo .e {
+          -webkit-transform: rotate(-15deg);
+          -moz-transform: rotate(-15deg);
+          -ms-transform: rotate(-15deg);
+          -o-transform: rotate(-15deg);
+          transform: rotate(-15deg); }
+        .jp-card-logo.jp-card-elo .o {
+          position: relative;
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          right: 0;
+          top: 7px;
+          border-radius: 100%;
+          background-image: -webkit-linear-gradient( yellow 50%, red 50%);
+          background-image: linear-gradient( yellow 50%, red 50%);
+          -webkit-transform: rotate(40deg);
+          -moz-transform: rotate(40deg);
+          -ms-transform: rotate(40deg);
+          -o-transform: rotate(40deg);
+          transform: rotate(40deg);
+          text-indent: -9999px; }
+          .jp-card-logo.jp-card-elo .o:before {
+            content: "";
+            position: absolute;
+            width: 49%;
+            height: 49%;
+            background: black;
+            border-radius: 100%;
+            text-indent: -99999px;
+            top: 25%;
+            left: 25%; }
+
+      .jp-card.jp-card-elo.jp-card-identified .jp-card-front:before, .jp-card.jp-card-elo.jp-card-identified .jp-card-back:before {
+        background-color: #6F6969; }
+
+      .jp-card.jp-card-elo.jp-card-identified .jp-card-logo.jp-card-elo {
+        opacity: 1; }
+
+      .jp-card-logo.jp-card-dinersclub {
+        font-family: serif;
+        height: 40px;
+        width: 100px;
+        color: white;
+        font-size: 17px;
+        font-style: normal;
+        letter-spacing: 1px; }
+        .jp-card-logo.jp-card-dinersclub::before, .jp-card-logo.jp-card-dinersclub::after {
+          display: block;
+          position: relative; }
+        .jp-card-logo.jp-card-dinersclub::before {
+          content: 'Diners Club'; }
+        .jp-card-logo.jp-card-dinersclub::after {
+          content: 'International';
+          text-transform: uppercase;
+          font-size: 0.6em; }
+
+      .jp-card.jp-card-dinersclub .jp-card-front .jp-card-logo {
+        box-shadow: none !important; }
+
+      .jp-card.jp-card-dinersclub.jp-card-identified .jp-card-front:before, .jp-card.jp-card-dinersclub.jp-card-identified .jp-card-back:before {
+        background-color: #999; }
+
+      .jp-card.jp-card-dinersclub.jp-card-identified .jp-card-logo.jp-card-dinersclub {
+        opacity: 1; }
+
+      .jp-card-container {
+        -webkit-perspective: 1000px;
+        -moz-perspective: 1000px;
+        perspective: 1000px;
+        width: 350px;
+        max-width: 100%;
+        height: 200px;
+        margin: auto;
+        z-index: 1;
+        position: relative; }
+
+      .jp-card {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        line-height: 1;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        min-width: 315px;
+        border-radius: 10px;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transition: all 400ms linear;
+        -moz-transition: all 400ms linear;
+        transition: all 400ms linear; }
+        .jp-card > *, .jp-card > *:before, .jp-card > *:after {
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          font-family: inherit; }
+        .jp-card.jp-card-flipped {
+          -webkit-transform: rotateY(180deg);
+          -moz-transform: rotateY(180deg);
+          -ms-transform: rotateY(180deg);
+          -o-transform: rotateY(180deg);
+          transform: rotateY(180deg); }
+        .jp-card .jp-card-front, .jp-card .jp-card-back {
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          -webkit-transform-style: preserve-3d;
+          -moz-transform-style: preserve-3d;
+          -ms-transform-style: preserve-3d;
+          -o-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+          -webkit-transition: all 400ms linear;
+          -moz-transition: all 400ms linear;
+          transition: all 400ms linear;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          overflow: hidden;
+          border-radius: 10px;
+          background: #DDD; }
+          .jp-card .jp-card-front:before, .jp-card .jp-card-back:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            border-radius: 10px;
+            -webkit-transition: all 400ms ease;
+            -moz-transition: all 400ms ease;
+            transition: all 400ms ease; }
+          .jp-card .jp-card-front:after, .jp-card .jp-card-back:after {
+            content: " ";
+            display: block; }
+          .jp-card .jp-card-front .jp-card-display, .jp-card .jp-card-back .jp-card-display {
+            color: white;
+            font-weight: normal;
+            opacity: 0.5;
+            -webkit-transition: opacity 400ms linear;
+            -moz-transition: opacity 400ms linear;
+            transition: opacity 400ms linear; }
+            .jp-card .jp-card-front .jp-card-display.jp-card-focused, .jp-card .jp-card-back .jp-card-display.jp-card-focused {
+              opacity: 1;
+              font-weight: 700; }
+          .jp-card .jp-card-front .jp-card-cvc, .jp-card .jp-card-back .jp-card-cvc {
+            font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+            font-size: 14px; }
+          .jp-card .jp-card-front .jp-card-shiny, .jp-card .jp-card-back .jp-card-shiny {
+            width: 50px;
+            height: 35px;
+            border-radius: 5px;
+            background: #CCC;
+            position: relative; }
+            .jp-card .jp-card-front .jp-card-shiny:before, .jp-card .jp-card-back .jp-card-shiny:before {
+              content: " ";
+              display: block;
+              width: 70%;
+              height: 60%;
+              border-top-right-radius: 5px;
+              border-bottom-right-radius: 5px;
+              background: #d9d9d9;
+              position: absolute;
+              top: 20%; }
+        .jp-card .jp-card-front .jp-card-logo {
+          position: absolute;
+          opacity: 0;
+          right: 5%;
+          top: 8%;
+          -webkit-transition: 400ms;
+          -moz-transition: 400ms;
+          transition: 400ms; }
+        .jp-card .jp-card-front .jp-card-lower {
+          width: 80%;
+          position: absolute;
+          left: 10%;
+          bottom: 30px; }
+          @media only screen and (max-width: 480px) {
+            .jp-card .jp-card-front .jp-card-lower {
+              width: 90%;
+              left: 5%; } }
+          .jp-card .jp-card-front .jp-card-lower .jp-card-cvc {
+            visibility: hidden;
+            float: right;
+            position: relative;
+            bottom: 5px; }
+          .jp-card .jp-card-front .jp-card-lower .jp-card-number {
+            font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+            font-size: 24px;
+            clear: both;
+            margin-bottom: 30px; }
+          .jp-card .jp-card-front .jp-card-lower .jp-card-expiry {
+            font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+            letter-spacing: 0em;
+            position: relative;
+            float: right;
+            width: 25%; }
+            .jp-card .jp-card-front .jp-card-lower .jp-card-expiry:before, .jp-card .jp-card-front .jp-card-lower .jp-card-expiry:after {
+              font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+              font-weight: bold;
+              font-size: 7px;
+              white-space: pre;
+              display: block;
+              opacity: .5; }
+            .jp-card .jp-card-front .jp-card-lower .jp-card-expiry:before {
+              content: attr(data-before);
+              margin-bottom: 2px;
+              font-size: 7px;
+              text-transform: uppercase; }
+            .jp-card .jp-card-front .jp-card-lower .jp-card-expiry:after {
+              position: absolute;
+              content: attr(data-after);
+              text-align: right;
+              right: 100%;
+              margin-right: 5px;
+              margin-top: 2px;
+              bottom: 0; }
+          .jp-card .jp-card-front .jp-card-lower .jp-card-name {
+            text-transform: uppercase;
+            font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+            font-size: 20px;
+            max-height: 45px;
+            position: absolute;
+            bottom: 0;
+            width: 190px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: horizontal;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+        .jp-card .jp-card-back {
+          -webkit-transform: rotateY(180deg);
+          -moz-transform: rotateY(180deg);
+          -ms-transform: rotateY(180deg);
+          -o-transform: rotateY(180deg);
+          transform: rotateY(180deg); }
+          .jp-card .jp-card-back .jp-card-bar {
+            background-color: #444;
+            background-image: -webkit-linear-gradient(#444, #333);
+            background-image: linear-gradient(#444, #333);
+            width: 100%;
+            height: 20%;
+            position: absolute;
+            top: 10%; }
+          .jp-card .jp-card-back:after {
+            content: " ";
+            display: block;
+            background-color: #FFF;
+            background-image: -webkit-linear-gradient(#FFF, #FFF);
+            background-image: linear-gradient(#FFF, #FFF);
+            width: 80%;
+            height: 16%;
+            position: absolute;
+            top: 40%;
+            left: 2%; }
+          .jp-card .jp-card-back .jp-card-cvc {
+            position: absolute;
+            top: 40%;
+            left: 85%;
+            -webkit-transition-delay: 600ms;
+            -moz-transition-delay: 600ms;
+            transition-delay: 600ms; }
+          .jp-card .jp-card-back .jp-card-shiny {
+            position: absolute;
+            top: 66%;
+            left: 2%; }
+            .jp-card .jp-card-back .jp-card-shiny:after {
+              content: "This card has been issued by Jesse Pollak and is licensed for anyone to use anywhere for free. It comes with no warranty. For support issues, please visit: github.com/jessepollak/card.";
+              position: absolute;
+              left: 120%;
+              top: 5%;
+              color: white;
+              font-size: 7px;
+              width: 230px;
+              opacity: .5; }
+        .jp-card.jp-card-identified {
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); }
+          .jp-card.jp-card-identified .jp-card-front, .jp-card.jp-card-identified .jp-card-back {
+            background-color: #000;
+            background-color: rgba(0, 0, 0, 0.5); }
+            .jp-card.jp-card-identified .jp-card-front:before, .jp-card.jp-card-identified .jp-card-back:before {
+              -webkit-transition: all 400ms ease;
+              -moz-transition: all 400ms ease;
+              transition: all 400ms ease;
+              background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 1px, rgba(255, 255, 255, 0) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(210deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-radial-gradient(circle at 90% 20%, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-radial-gradient(circle at 15% 80%, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), -webkit-linear-gradient(-245deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0) 90%);
+              background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 1px, rgba(255, 255, 255, 0) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(210deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-radial-gradient(circle at 90% 20%, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-radial-gradient(circle at 15% 80%, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), linear-gradient(-25deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0) 90%);
+              opacity: 1; }
+            .jp-card.jp-card-identified .jp-card-front .jp-card-logo, .jp-card.jp-card-identified .jp-card-back .jp-card-logo {
+              box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3); }
+          .jp-card.jp-card-identified.no-radial-gradient .jp-card-front:before, .jp-card.jp-card-identified.no-radial-gradient .jp-card-back:before {
+            background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 1px, rgba(255, 255, 255, 0) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(210deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), -webkit-linear-gradient(-245deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0) 90%);
+            background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 1px, rgba(255, 255, 255, 0) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(210deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), linear-gradient(-25deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0) 90%); }
+  %body.body
+    .icon-load
+      .sk-folding-cube
+        .sk-cube1.sk-cube
+        .sk-cube2.sk-cube
+        .sk-cube4.sk-cube
+        .sk-cube3.sk-cube
+    / Off-Canvas Category Menu
+    #shop-categories.offcanvas-container
+      .offcanvas-header
+        %h3.offcanvas-title Solved Ranges
+      %nav.offcanvas-menu
+        %ul.menu
+          %li.has-children
+            %span
+              %a{:href => "http://localhost:3000/my_solutions#"} APPS
+              %span.sub-menu-toggle
+            %ul.offcanvas-submenu
+              %li.back-btn
+                %a{:href => "http://localhost:3000/my_solutions#"} Back
+          %li.has-children
+            %span
+              %a{:href => "http://localhost:3000/my_solutions#"} BUNDLE
+              %span.sub-menu-toggle
+            %ul.offcanvas-submenu
+              %li.back-btn
+                %a{:href => "http://localhost:3000/my_solutions#"} Back
+          %li.has-children
+            %span
+              %a{:href => "http://localhost:3000/my_solutions#"} CASH
+              %span.sub-menu-toggle
+            %ul.offcanvas-submenu
+              %li.back-btn
+                %a{:href => "http://localhost:3000/my_solutions#"} Back
+              %li
+                %a{:href => "http://localhost:3000/solutions/6max-100bb-Limit"} 6max 100bb Limit
+              %li
+                %a{:href => "http://localhost:3000/solutions/3max-10bb-acr"} 3max 10bb acr
+              %li
+                %a{:href => "http://localhost:3000/solutions/3max-20bb-ACR"} 3max 20bb ACR
+              %li
+                %a{:href => "http://localhost:3000/solutions/3max-15bb-acr"} 3max 15bb acr
+              %li
+                %a{:href => "http://localhost:3000/solutions/hu-acr-15bb"} hu acr 15bb
+              %li
+                %a{:href => "http://localhost:3000/solutions/hu-20bb-acr"} hu 20bb acr
+              %li
+                %a{:href => "http://localhost:3000/solutions/HU-ACR-10bb"} HU ACR 10bb
+              %li
+                %a{:href => "http://localhost:3000/solutions/6max-Hyper-16bb"} 6max Hyper 16bb
+              %li
+                %a{:href => "http://localhost:3000/solutions/8max-20bb"} 8max 20bb
+              %li
+                %a{:href => "http://localhost:3000/solutions/5max-testtt"} 5max testtt
+              %li
+                %a{:href => "http://localhost:3000/solutions/4way-str"} 4way str
+              %li
+                %a{:href => "http://localhost:3000/solutions/hu_100bb"} HU 100bb
+              %li
+                %a{:href => "http://localhost:3000/solutions/6_max_postflop_solutions"} 6max GG 100bb Flop Addon
+          %li.has-children
+            %span
+              %a{:href => "http://localhost:3000/my_solutions#"} ICM
+              %span.sub-menu-toggle
+            %ul.offcanvas-submenu
+              %li.back-btn
+                %a{:href => "http://localhost:3000/my_solutions#"} Back
+          %li.has-children
+            %span
+              %a{:href => "http://localhost:3000/my_solutions#"} MTT
+              %span.sub-menu-toggle
+            %ul.offcanvas-submenu
+              %li.back-btn
+                %a{:href => "http://localhost:3000/my_solutions#"} Back
+          %li.has-children
+            %span
+              %a{:href => "http://localhost:3000/my_solutions#"} PLO
+              %span.sub-menu-toggle
+            %ul.offcanvas-submenu
+              %li.back-btn
+                %a{:href => "http://localhost:3000/my_solutions#"} Back
+              %li
+                %a{:href => "http://localhost:3000/solutions/hu-4c-plo-40bb"} HU 40bb 4c PLO
+              %li
+                %a{:href => "http://localhost:3000/solutions/6max_100bb_mtt_plo"} 6max 100bb PLO MTT
+          %li.has-children
+            %span
+              %a{:href => "http://localhost:3000/my_solutions#"} PLO5
+              %span.sub-menu-toggle
+            %ul.offcanvas-submenu
+              %li.back-btn
+                %a{:href => "http://localhost:3000/my_solutions#"} Back
+              %li
+                %a{:href => "http://localhost:3000/solutions/hu_tree.png"} HU 40bb 5c PLO
+          %li.has-children
+            %span
+              %a{:href => "http://localhost:3000/my_solutions#"} SHORT DECK
+              %span.sub-menu-toggle
+            %ul.offcanvas-submenu
+              %li.back-btn
+                %a{:href => "http://localhost:3000/my_solutions#"} Back
+              %li
+                %a{:href => "http://localhost:3000/solutions/3max-SD-ICM-BTN9-20-30"} 3max SD ICM BTN9-20-30
+              %li
+                %a{:href => "http://localhost:3000/solutions/50a_shortdeck_4max_solutions"} 4max 50a ShortDeck
+              %li
+                %a{:href => "http://localhost:3000/solutions/4max-50a-SD"} 4max 50a SD
+              %li
+                %a{:href => "http://localhost:3000/solutions/hu-7x-iso"} hu 7x iso
+              %li
+                %a{:href => "http://localhost:3000/solutions/hu_sd_postflop_solutions"} HU 100a ShortDeck Postflop (Yearly)
+              %li
+                %a{:href => "http://localhost:3000/solutions/4_max_postflop_sd_solutions"} 4max 50a ShortDeck Postflop (Yearly)
+          %li.has-children
+            %span
+              %a{:href => "http://localhost:3000/my_solutions#"} SPINS
+              %span.sub-menu-toggle
+            %ul.offcanvas-submenu
+              %li.back-btn
+                %a{:href => "http://localhost:3000/my_solutions#"} Back
+    / Off-Canvas Mobile Menu
+    #mobile-menu.offcanvas-container
+      %nav.offcanvas-menu
+        %ul.menu
+          %li.has-children.active
+            %span
+              %a{:href => "http://localhost:3000/"}
+                %span Home
+          %li.has-children
+            %span
+              %a{:href => "http://localhost:3000/solutions?filter_format=217"}
+                %span SOLVED RANGES
+          %li.has-children
+            %span
+              %a{"data-turbolinks" => "false", :href => "http://localhost:3000/online/training/products"}
+                %span GTO LIVE! STORE
+          %li.has-children
+            %span
+              %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=&filter_format=217"}
+                %span ONLINE RANGE VIEWER
+          %li.has-children
+            %span
+              %a{"data-turbolinks" => "false", :href => "http://localhost:3000/my_solutions"}
+                %span MY SOLUTIONS
+          %li.has-children
+            %span
+              %a{"data-turbolinks" => "false", :href => "http://localhost:3000/my_gto_live"}
+                %span MY GTO LIVE!
+    / Topbar
+    .topbar.neg-marg
+      .topbar-column{:style => "width:25%"}
+        %a.hidden-md-down{:href => "mailto:support@rangeconverter.com"}
+          %i.icon-mail>
+            support@rangeconverter.com
+        %a.social-button.sb-twitter.shape-none.sb-dark.hidden-sm-down{:href => "http://twitter.com/rangeconverter", :target => "_blank"}
+          %i.socicon-twitter
+        %a.social-button.sb-youtube.shape-none.sb-dark.hidden-sm-down{:href => "https://www.youtube.com/channel/UCsZTqf11fZtePq4SPqWCTmA", :target => "_blank"}
+          %i.socicon-youtube
+        %a.offcanvas-toggle.menu-toggle.hidden-md-up{"data-toggle" => "offcanvas", :href => "http://localhost:3000/my_solutions#mobile-menu"}
+      .topbar-column.text-center.hidden-md-up
+        %a.site-logo{:href => "http://localhost:3000/"}
+          %strong
+            %i.fa.fa-exchange>
+             RangeConverter
+      .topbar-column.text-right.hidden-md-up
+        %a{"data-turbolinks" => "false", :href => "http://localhost:3000/my_solutions"}
+          %i.icon-head
+      .topbar-column
+        %a{"data-method" => "delete", :href => "http://localhost:3000/users/sign_out", :rel => "nofollow"} Log out
+    %header#header-nav.navbar.navbar-sticky.hidden-sm-down
+      .site-branding
+        .inner
+          / Off-Canvas Toggle (#shop-categories)
+          %a.offcanvas-toggle.cats-toggle{"data-toggle" => "offcanvas", :href => "http://localhost:3000/my_solutions#shop-categories"}
+          / Off-Canvas Toggle (#mobile-menu)
+          %a.offcanvas-toggle.menu-toggle{"data-toggle" => "offcanvas", :href => "http://localhost:3000/my_solutions#mobile-menu"}
+          / Site Logo
+          %a.site-logo{:href => "http://localhost:3000/"}
+            %strong
+              %i.fa.fa-exchange>
+               RangeConverter
+            / = image_tag("logo/logo.png", alt: "Unishop")
+      / Main Navigation
+      %nav.site-menu
+        %ul{:style => "padding-left: 25%;"}
+          %li.has-submenu{:style => "padding-top: 28.5px;"}
+            %a{:href => "http://localhost:3000/solutions?filter_format=217"} Solved Ranges
+            %ul.sub-menu
+              %li.has-children
+                %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=apps&filter_format="} APPS
+                %ul.sub-menu
+              %li.has-children
+                %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=bundle&filter_format="} BUNDLE
+                %ul.sub-menu
+              %li.has-children
+                %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=cash&filter_format="} CASH
+                %ul.sub-menu
+                  %li.has-children
+                    %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=cash&player_count=2"} Heads Up
+                    %ul.sub-menu
+                      %li
+                        %a{:href => "http://localhost:3000/solutions/hu_100bb"} HU 100bb
+                  %li.has-children
+                    %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=cash&player_count=6"} 6 Max
+                    %ul.sub-menu
+                      %li
+                        %a{:href => "http://localhost:3000/solutions/6_max_postflop_solutions"} 6max GG 100bb Flop Addon
+              %li.has-children
+                %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=icm&filter_format="} ICM
+                %ul.sub-menu
+              %li.has-children
+                %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=mtt&filter_format="} MTT
+                %ul.sub-menu
+              %li.has-children
+                %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=plo&filter_format="} PLO
+                %ul.sub-menu
+                  %li.has-children
+                    %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=plo&player_count=2"} Heads Up
+                    %ul.sub-menu
+                      %li
+                        %a{:href => "http://localhost:3000/solutions/hu-4c-plo-40bb"} HU 40bb 4c PLO
+                  %li.has-children
+                    %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=plo&player_count=6"} 6 Max
+                    %ul.sub-menu
+                      %li
+                        %a{:href => "http://localhost:3000/solutions/6max_100bb_mtt_plo"} 6max 100bb PLO MTT
+              %li.has-children
+                %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=plo5&filter_format="} PLO5
+                %ul.sub-menu
+                  %li.has-children
+                    %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=plo5&player_count=2"} Heads Up
+                    %ul.sub-menu
+                      %li
+                        %a{:href => "http://localhost:3000/solutions/hu_tree.png"} HU 40bb 5c PLO
+              %li.has-children
+                %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=short_deck&filter_format="} SHORT DECK
+                %ul.sub-menu
+                  %li.has-children
+                    %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=short_deck&player_count=2"} Heads Up
+                    %ul.sub-menu
+                      %li
+                        %a{:href => "http://localhost:3000/solutions/hu_sd_postflop_solutions"} HU 100a ShortDeck Postflop (Yearly)
+                  %li.has-children
+                    %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=short_deck&player_count=6"} 6 Max
+                    %ul.sub-menu
+                      %li
+                        %a{:href => "http://localhost:3000/solutions/4_max_postflop_sd_solutions"} 4max 50a ShortDeck Postflop (Yearly)
+              %li.has-children
+                %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=spins&filter_format="} SPINS
+                %ul.sub-menu
+          %li
+            %a{"data-turbolinks" => "false", :href => "http://localhost:3000/online/training/products"}
+              %span GTO Live! Trainer
+          %li
+            %a{:href => "http://localhost:3000/solutions?page=&filter_gametype=&filter_format=217"}
+              %span Online Range Viewer
+          %li.hidden-md-screen
+            %a{:href => "http://localhost:3000/my_solutions#"}
+              %span Convert
+            %ul.sub-menu
+              %li
+                %a{:href => "http://localhost:3000/conversion/new?locale=us"}
+                  %span Pio/CREV/PPT
+              %li
+                %a{:href => "http://localhost:3000/solutions/mkr_to_pio?locale=us"}
+                  %span Monker To Pio
+          %li.hidden-md-screen
+            %a{:href => "http://localhost:3000/guides"}
+              %span Guides
+            %ul.sub-menu
+              %li
+                %a{:href => "http://localhost:3000/faq"}
+                  %span FAQ
+              %li
+                %a{:href => "http://localhost:3000/guides"}
+                  %span Videos
+          %li
+            %a{"data-turbolinks" => "false", :href => "http://localhost:3000/my_solutions"}
+              %span My Solutions
+          %li
+            %a{"data-turbolinks" => "false", :href => "http://localhost:3000/my_gto_live"}
+              %span My GTO Live!
+      / Toolbar
+      .toolbar
+        .inner
+          .tools
+            .account
+              %a{:href => "http://localhost:3000/my_solutions#"}
+              %img{:src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/user_icon.png", :style => "width: 42px;height: 42px;border-radius: inherit;"}/
+              %ul.toolbar-dropdown
+                %li.sub-menu-user
+                  .user-info
+                    %h6.user-name craig@rangeconverter.com
+                %li
+                  %a{"data-turbolinks" => "false", :href => "http://localhost:3000/my_solutions"} My Solutions
+                %li
+                  %a{"data-turbolinks" => "false", :href => "http://localhost:3000/my_gto_live"} My GTO Live
+                %li
+                  %a{:href => "http://localhost:3000/my_preferences"} My Settings
+                %li
+                  %a{:href => "http://localhost:3000/filters?locale=us"} Filters
+                %li.sub-menu-separator
+                %li
+                  %a{"data-method" => "delete", :href => "http://localhost:3000/users/sign_out", :rel => "nofollow"} Log out
+    .alert.alert-info.fade.in.text-center
+      %button.close{"data-dismiss" => "alert"}> x
+      Signed in successfully.
+    #uploadSimModal.modal.fade.ali{"aria-hidden" => "true", "aria-labelledby" => "uploadSimModalLabel", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog{:role => "document"}
+        .modal-content.modal{:style => "width: 900px;"}
+          .modal-header{:style => "margin-top: -100px;"}
+            %h5#uploadSimModal.modal-title Upload Custom Sim
+            #uploadSimModalCloseBtn.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+          .modal-body
+            .row
+              .col-xs-12
+                %form#custom_sim_upload{"accept-charset" => "UTF-8", :action => "http://localhost:3000/online/solutions", "data-remote" => "true", :enctype => "multipart/form-data", :html => "{:class=>\"form-horizontal\"}", :method => "post"}
+                  %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+                  %input{:name => "authenticity_token", :type => "hidden", :value => "jc5iCtt0bPaVkbkmdKTkMzNXr0iO1uRfa3OScNx7jXiy+JW4x7fDj2QJw4N7Ei7OmjrlsuYngGVCtT3U4C0TQg=="}/
+                  .row.justify-content-center
+                    .col-sm-12
+                      .form-group
+                        %label
+                          %span.translation_missing{:title => "translation missing: en.game_name"} Game Name
+                        %input#game_name{:name => "game_name", :type => "text"}/
+                      .form-group
+                        %label
+                          %span.translation_missing{:title => "translation missing: en.player_count"} Player Count
+                        %select#player_count{:name => "player_count"}
+                          %option{:value => "9"} 9
+                          %option{:value => "8"} 8
+                          %option{:value => "7"} 7
+                          %option{:value => "6"} 6
+                          %option{:value => "5"} 5
+                          %option{:value => "4"} 4
+                          %option{:value => "3"} 3
+                          %option{:value => "2"} 2
+                      .form-group
+                        %label
+                          %span.translation_missing{:title => "translation missing: en.game_type"} Game Type
+                        %select#game_type{:name => "game_type"}
+                          %option{:value => "Holdem"} Holdem
+                          %option{:value => "ShortDeck"} ShortDeck
+                      .form-group
+                        %label Total Ante (in chips)
+                        %input#antes{:name => "antes", :type => "text", :value => "0"}/
+                      .form-group
+                        %label
+                          %span.translation_missing{:title => "translation missing: en.straddle"} Straddle
+                        %input#straddle{:name => "straddle", :type => "text", :value => "0"}/
+                      .form-group
+                        %label Chip settings (Default 1,2)
+                        %input#chips{:name => "chips", :type => "text", :value => "1,2"}/
+                      .form-group
+                        %label Public?
+                        %input#public{:name => "public", :type => "checkbox", :value => "1"}/
+                    .col-sm-12
+                      .form-group
+                        %input#solution_zip{:name => "solution_zip", :type => "file"}/
+                      %strong{:style => "color: red;"} Filetype must be ZIP and can contain only rng files or will be rejected.
+                      %br/
+                      %br/
+                    .col-sm-12
+                      %strong#upload_response
+                  .col-sm-12
+                    .alert.alert-info.text-center{:role => "alert"}
+                      Please make sure all chip settings, ante and straddle information is correct before uploading.
+                      %a{:href => "https://youtu.be/AMx_K3gsFpA", :target => "_blank"} Please watch the tutorial if unsure.
+                  %input.button.btn.btn-primary{"data-disable-with" => "Upload", :name => "commit", :type => "submit", :value => "Upload"}/
+    #managePlanModal.modal.fade.ali{"aria-hidden" => "true", "aria-labelledby" => "managePlanModal", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog{:role => "document"}
+        .modal-content.modal{:style => "width: 900px;"}
+          .modal-header{:style => "margin-top: -100px;"}
+            %h5#managePlanModal.modal-title My Custom Sim Plans
+            #managePlanModalCloseBtn.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+          .modal-body
+            %p Adding a sim plan allows you to upload and view your own Monkersolver sims in our online viewer.
+            .row
+              .col-sm-12
+                %h5 Add Plan
+              .col-sm-6
+                %input.btn.btn-add-sims.stripeSubsPurchase{"data-disable-with" => "5 sim upload $99/month", :name => "plan_GtQbkgwevtzgEe", :type => "submit", :value => "5 sim upload $99/month"}/
+              .col-sm-6
+                %input.btn.btn-add-sims.stripeSubsPurchase{"data-disable-with" => "3 sim upload $79/month", :name => "plan_GtQajp2RlKZWoO", :type => "submit", :value => "3 sim upload $79/month"}/
+              .col-sm-6
+                %input.btn.btn-add-sims.stripeSubsPurchase{"data-disable-with" => "1 sim upload $39/month", :name => "plan_GtQZvZPG9jjMfw", :type => "submit", :value => "1 sim upload $39/month"}/
+              .col-sm-6
+                %input.btn.btn-add-sims.stripeSubsPurchase{"data-disable-with" => "10 sim upload $189/month", :name => "plan_GtQbqmJygh4rHx", :type => "submit", :value => "10 sim upload $189/month"}/
+            .row.padding-top-1x
+              .col-sm-12
+                %h5 Active Plans
+                %p You do not have any active upload plans.
+    .container
+      .row.padding-top-2x
+        .col-md-12.text-center
+          %h2.title-purchased
+            %span My Solutions /
+            %a.text-muted{"data-turbolinks" => "false", :href => "http://localhost:3000/my_gto_live"} My GTO Live!
+          %h3 BROWSE YOUR SOLUTIONS HERE
+          %a{"data-target" => "#managePlanModal", "data-toggle" => "modal", :href => "http://localhost:3000/my_solutions#managePlanModal"} Manage Custom Sim Plans
+        .col-xs-12
+          %section#solution
+            .row.padding-top-1x
+              .col-md-9.col-xs-12
+                %h6.text-muted.text-normal.text-uppercase.mt-2 Recently Viewed
+                %hr.margin-bottom-1x/
+                .col-lg-3.col-md-3.solution-item.wow.fadeInUp.padding-bottom-1x{:style => "height:fit-content;"}
+                  .solution-wrap.panel.recent-solution-info
+                    %figure
+                      %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/100a-shortdeck-hu-4084a0ae8a24808ebf78f6b01e2a2adebeb0316e86d2f64be17900a840f6e9c7.png"}/
+                      %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/7", :title => "Online Browser"}
+                        %span{:style => "font-size:14px"} Browse Solution Online
+                    .solution-info{:style => "padding: 10px;"}
+                      %p.text-muted HU ShortDeck 100a
+                .col-lg-3.col-md-3.solution-item.wow.fadeInUp.padding-bottom-1x{:style => "height:fit-content;"}
+                  .solution-wrap.panel.recent-solution-info
+                    %figure
+                      %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/headsup-tree-cc6c3dd6f384d7be98ec56a298d1134d543bbe9f1bf516e04becbc28ce514aa4.png"}/
+                      %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/1", :title => "Online Browser"}
+                        %span{:style => "font-size:14px"} Browse Solution Online
+                    .solution-info{:style => "padding: 10px;"}
+                      %p.text-muted HU 100bb
+                .col-lg-3.col-md-3.solution-item.wow.fadeInUp.padding-bottom-1x{:style => "height:fit-content;"}
+                  .solution-wrap.panel.recent-solution-info
+                    %figure
+                      %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/4max-sd-50a-5d27fb05484279faf765070089f9fb6d16b07194b1bd137cb87d7ff053428f2e.png"}/
+                      %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/10", :title => "Online Browser"}
+                        %span{:style => "font-size:14px"} Browse Solution Online
+                    .solution-info{:style => "padding: 10px;"}
+                      %p.text-muted 4max 50a ShortDeck
+                .col-lg-3.col-md-3.solution-item.wow.fadeInUp.padding-bottom-1x{:style => "height:fit-content;"}
+                  .solution-wrap.panel.recent-solution-info
+                    %figure
+                      %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                      %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/186", :title => "Online Browser"}
+                        %span{:style => "font-size:14px"} Browse Solution Online
+                    .solution-info{:style => "padding: 10px;"}
+                      %p.text-muted Custom: HU Hyper 10bb
+              .col-md-3.col-xs-12
+                %h6.text-muted.text-normal.text-uppercase.mt-2 Most Viewed
+                %hr.margin-bottom-1x/
+                %a.text-muted.text-normal{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/7"} HU ShortDeck 100a
+                %br/
+                %a.text-muted.text-normal{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/10"} 4max 50a ShortDeck
+                %br/
+                %a.text-muted.text-normal{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/189"} 6max Hyper
+                %br/
+                %a.text-muted.text-normal{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/1"} HU 100bb
+                %br/
+                %a.text-muted.text-normal{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/196"} 3max 15bb acr
+                %br/
+                %a.text-muted.text-normal{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/194"} 3max 20bb ACR
+                %br/
+                %a.text-muted.text-normal{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/186"} HU Hyper 10bbxv
+                %br/
+                %a.text-muted.text-normal{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/186"} Custom: HU Hyper 10bb
+                %br/
+                %a.text-muted.text-normal{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/195"} 3max 10bb acr
+                %br/
+                %a.text-muted.text-normal{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/193"} sd 3max
+                %br/
+      .container
+        .row
+          %section#solution
+            .row
+              .col-xs-12.text-center.margin-bottom-2x
+                %a.text-muted.text-normal.text-uppercase{"data-target" => "#cash_section", "data-turbolinks" => "false", :href => "http://localhost:3000/my_solutions#cash_section"} Cash
+                |
+                %a.text-muted.text-normal.text-uppercase{"data-target" => "#short_deck_section", "data-turbolinks" => "false", :href => "http://localhost:3000/my_solutions#short_deck_section"} Short deck
+                |
+                %a.text-muted.text-normal.text-uppercase{"data-target" => "#plo_section", "data-turbolinks" => "false", :href => "http://localhost:3000/my_solutions#plo_section"} Plo
+                |
+                %a.text-muted.text-normal.text-uppercase{"data-target" => "#plo5_section", "data-turbolinks" => "false", :href => "http://localhost:3000/my_solutions#plo5_section"} Plo5
+            .container
+              .row.solution-container
+                .col-md-4.solution-item.wow.fadeInUp.hidden-xs
+                  .solution-wrap
+                    %figure
+                      %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/6max-100bb-2e5e36a9f24e22448b7ca65502cfab9bb91485c64fe0c726a1957f473757c411.png"}/
+                      %a.link-details{"data-target" => "#uploadSimModal", "data-toggle" => "modal", :href => "http://localhost:3000/my_solutions#uploadSimModal"}
+                        %span Add your own sim!
+                    .solution-info
+                      %h4{:style => "margin-top:-5px;"}
+                        %a{"data-target" => "#uploadSimModal", "data-toggle" => "modal", :href => "http://localhost:3000/my_solutions#uploadSimModal"} Upload Custom Sim
+                .col-md-4.hidden-xs
+                #cash_section.row{:style => "width: 100%"}
+                  .col-xs-12.text-center
+                    %h6.text-muted.text-normal.text-uppercase.pt-2 Cash
+                    %hr.margin-bottom-1x/
+                .row
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/212", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/6max-100bb-Limit?locale=us"} 6max 100bb Limit
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/195", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/3max-10bb-acr?locale=us"} 3max 10bb acr
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/194", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/3max-20bb-ACR?locale=us"} 3max 20bb ACR
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/196", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/3max-15bb-acr?locale=us"} 3max 15bb acr
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/198", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/hu-acr-15bb?locale=us"} hu acr 15bb
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/199", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/hu-20bb-acr?locale=us"} hu 20bb acr
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/186", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/?locale=us"} Custom: HU Hyper 10bb
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/186", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/?locale=us"} HU Hyper 10bbxv
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/204", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/4way-str?locale=us"} 4way str
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/205", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/8max-20bb?locale=us"} 8max 20bb
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/208", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/5max-testtt?locale=us"} 5max testtt
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/201", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/6max-Hyper-16bb?locale=us"} 6max Hyper 16bb
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/189", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/?locale=us"} 6max Hyper
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/197", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/HU-ACR-10bb?locale=us"} HU ACR 10bb
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/217", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/6_max_postflop_solutions?locale=us"} 6max GG 100bb Flop Addon
+                        %p Expired: 2021-01-31 23:01:31 UTC
+                        #renew_324.renew_sub{"data-id" => "2"}
+                          %a{:href => "http://localhost:3000/my_solutions#"} Renew?
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/headsup-tree-cc6c3dd6f384d7be98ec56a298d1134d543bbe9f1bf516e04becbc28ce514aa4.png"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/221", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => "background: #e1e1e1;"}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/my_solutions#"} 6max 500z
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/6max-tree-20ed6fd7f15accbb63c74edec9c46e6270a1356eddcfe5d6804906df086e4634.png"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/217", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => "background: #e1e1e1;"}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/my_solutions#"} 6max 100bb GG 3b/f
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/headsup-tree-cc6c3dd6f384d7be98ec56a298d1134d543bbe9f1bf516e04becbc28ce514aa4.png"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/219", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => "background: #e1e1e1;"}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/my_solutions#"} 3max 500z
+                  .col-lg-4.col-md-6.fadeInUp.filter-cash.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/headsup-tree-cc6c3dd6f384d7be98ec56a298d1134d543bbe9f1bf516e04becbc28ce514aa4.png"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/1", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/hu_100bb?locale=us"} HU 100bb
+                #short_deck_section.row{:style => "width: 100%"}
+                  .col-xs-12.text-center
+                    %h6.text-muted.text-normal.text-uppercase.pt-2 Short deck
+                    %hr.margin-bottom-1x/
+                .row
+                  .col-lg-4.col-md-6.fadeInUp.filter-short_deck.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/193", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => "background: #e1e1e1;"}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/my_solutions#"} sd 3max
+                  .col-lg-4.col-md-6.fadeInUp.filter-short_deck.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/206", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/hu-7x-iso?locale=us"} hu 7x iso
+                  .col-lg-4.col-md-6.fadeInUp.filter-short_deck.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/210", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/4max-50a-SD?locale=us"} 4max 50a SD
+                  .col-lg-4.col-md-6.fadeInUp.filter-short_deck.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/4max-sd-50a-5d27fb05484279faf765070089f9fb6d16b07194b1bd137cb87d7ff053428f2e.png"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/10", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/50a_shortdeck_4max_solutions?locale=us"} 4max 50a ShortDeck
+                  .col-lg-4.col-md-6.fadeInUp.filter-short_deck.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/210", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/4_max_postflop_sd_solutions?locale=us"} 4max 50a ShortDeck Postflop (Yearly)
+                        %p Expired: 2021-01-31 23:01:44 UTC
+                        #renew_326.renew_sub{"data-id" => "226"}
+                          %a{:href => "http://localhost:3000/my_solutions#"} Renew?
+                  .col-lg-4.col-md-6.fadeInUp.filter-short_deck.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/7", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/hu_sd_postflop_solutions?locale=us"} HU 100a ShortDeck Postflop (Yearly)
+                        %p Expired: 2021-01-31 23:01:43 UTC
+                        #renew_325.renew_sub{"data-id" => "4"}
+                          %a{:href => "http://localhost:3000/my_solutions#"} Renew?
+                  .col-lg-4.col-md-6.fadeInUp.filter-short_deck.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/100a-shortdeck-hu-4084a0ae8a24808ebf78f6b01e2a2adebeb0316e86d2f64be17900a840f6e9c7.png"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/7", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => "background: #e1e1e1;"}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/my_solutions#"} HU ShortDeck 100a
+                #plo_section.row{:style => "width: 100%"}
+                  .col-xs-12.text-center
+                    %h6.text-muted.text-normal.text-uppercase.pt-2 Plo
+                    %hr.margin-bottom-1x/
+                .row
+                  .col-lg-4.col-md-6.fadeInUp.filter-plo.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/6max_100bb_mtt_plo-691642732d4ba68111b5def7568fe349dcfb49a05eef4a9a84fe1d9b5cf67e8a.png"}/
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/6max_100bb_mtt_plo?locale=us"} 6max 100bb PLO MTT
+                        %p
+                          %a.link-details{:href => "http://drive.google.com/file/d/1CocbgF8NGzmTwSbEn8xvMC8K8mYIedcA/view", :style => "color:#666666;", :target => "_blank"} MonkerSolver Saved Run
+                  .col-lg-4.col-md-6.fadeInUp.filter-plo.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/hu-tree-13ab7a3441df6c06d00b3e9a33b5cf2ac6ab25939e9c41493fd2ff8a8b94daeb.png"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/223", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/hu-4c-plo-40bb?locale=us"} HU 40bb 4c PLO
+                  .col-lg-4.col-md-6.fadeInUp.filter-plo.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/hu-tree-13ab7a3441df6c06d00b3e9a33b5cf2ac6ab25939e9c41493fd2ff8a8b94daeb.png"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/224", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => "background: #e1e1e1;"}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/my_solutions#"} HU 40bb PLO w Limp
+                  .col-lg-4.col-md-6.fadeInUp.filter-plo.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/headsup-tree-cc6c3dd6f384d7be98ec56a298d1134d543bbe9f1bf516e04becbc28ce514aa4.png"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/218", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => "background: #e1e1e1;"}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/my_solutions#"} HU PLO 9bb
+                #plo5_section.row{:style => "width: 100%"}
+                  .col-xs-12.text-center
+                    %h6.text-muted.text-normal.text-uppercase.pt-2 Plo5
+                    %hr.margin-bottom-1x/
+                .row
+                  .col-lg-4.col-md-6.fadeInUp.filter-plo5.solution-item.wow
+                    .solution-wrap.panel
+                      %figure
+                        %img.img-fluid{:alt => "", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/hu-tree-13ab7a3441df6c06d00b3e9a33b5cf2ac6ab25939e9c41493fd2ff8a8b94daeb.png"}/
+                        %a.link-details{"data-turbolinks" => "false", :href => "http://localhost:3000/online/solutions/222", :title => "Online Browser"}
+                          %span Browse Solution Online
+                      .solution-info{:style => ""}
+                        %h4{:style => "margin-top:-5px;"}
+                          %a{"data-turbolinks" => "false", :href => "http://localhost:3000/solutions/hu_tree.png?locale=us"} HU 40bb 5c PLO
+        / #solution
+    / Site Footer
+    #footer.site-footer
+      .container
+        .row
+          .col-lg-4.col-md-4
+            / Contact Info
+            %section.widget.widget-links.widget-light-skin
+              %h3.widget-title Get In Touch With Us
+              %ul
+                %li
+                  %a{:href => "mailto:support@rangeconverter.com"} support@rangeconverter.com
+                %li
+                  %a{:href => "http://localhost:3000/contact/new?subject=affiliate"} Affiliate Program
+              .row
+                .col.xs-12
+                  %br/
+                  %a.social-button.shape-circle.sb-twitter.sb-light-skin{:href => "https://twitter.com/rangeconverter"}
+                    %i.socicon-twitter
+                  %a.social-button.shape-circle.sb-instagram.sb-light-skin{:href => "https://youtube.com/rangeconverter"}
+                    %i.socicon-youtube
+          .col-lg-4.col-md-4
+            / About Us
+            %section.widget.widget-links.widget-light-skin
+              %h3.widget-title Private Services
+              %ul
+                %li
+                  %a{:href => "http://localhost:3000/solutions/custom_solutions"} Custom Solutions
+                %li
+                  %a{:href => "http://localhost:3000/contact/new?subject=software"} Custom Software
+                %li
+                  %a{:href => "http://localhost:3000/contact/new?subject=coaching"} Coaching
+          .col-lg-4.col-md-4
+            / Account / Shipping Info
+            %section.widget.widget-links.widget-light-skin
+              %h3.widget-title Integration
+              %ul
+                %li
+                  %a{:href => "http://localhost:3000/contact/new?subject=api"} Solution API
+                %li
+                  %a{:href => "http://localhost:3000/contact/new?subject=browser"} Embedded Solution Browser
+        / Copyright
+        %p.footer-copyright
+          © All rights reserved RangeConverter.com
+    / Back To Top Button
+    %a.scroll-to-top-btn{:href => "http://localhost:3000/my_solutions#"}
+      %i.icon-arrow-up
+    / Backdrop
+    .site-backdrop
+    %br/
+    %iframe{:allow => "payment *", :allowtransparency => "true", "aria-hidden" => "true", :frameborder => "0", :name => "__privateStripeMetricsController0540", :scrolling => "no", :src => "./No Limit Holdem & PLO Preflop Ranges _ Range Converter_files/m-outer-5564a2ae650989ada0dc7f7250ae34e9.html", :style => "border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;", :tabindex => "-1"}

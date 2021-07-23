@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://localhost:3000/my_solutions -->
+<html class=" svgfilters csscalc cssgradients preserve3d supports svgclippaths svgasimg no-touchevents cssanimations boxsizing csstransforms csstransforms3d csstransitions svg"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="Solved Preflop Ranges in Piosolver, MonkerSolver and through the web browser" name="Solved Preflop Holdem Poker Ranges.">
+<meta content="b83TS9JXSg2H20f7CfIdr6rDuQUbFlcSie3AMpAtvns" name="google-site-verification">
+<title>No Limit Holdem &amp; PLO Preflop Ranges | Range Converter</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="jc5iCtt0bPaVkbkmdKTkMzNXr0iO1uRfa3OScNx7jXiy+JW4x7fDj2QJw4N7Ei7OmjrlsuYngGVCtT3U4C0TQg==">
+<link rel="stylesheet" media="all" href="./images/materialdesignicons.self-ca87a1c19c7e590639f6b841d00e8eceff32ee73a52b2000c16d50f8df6778ed.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./images/application.self-db6acdbcd79c16a0697adf4d26cdc37760f17e487ded49713a490fd411a5a0c4.css" data-turbolinks-track="reload">
+<style type="text/css">
+
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.bg-poker {
+  background: url('./images/banner-n.jpeg') no-repeat;
+  background-size: cover;
+}
+
+.jp-card.jp-card-safari.jp-card-identified .jp-card-front:before, .jp-card.jp-card-safari.jp-card-identified .jp-card-back:before {
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 1px, rgba(255, 255, 255, 0) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(210deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), -webkit-linear-gradient(-245deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0) 90%);
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 1px, rgba(255, 255, 255, 0) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(210deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), linear-gradient(-25deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0) 90%); }
+
+.jp-card.jp-card-ie-10.jp-card-flipped, .jp-card.jp-card-ie-11.jp-card-flipped {
+  -webkit-transform: 0deg;
+  -moz-transform: 0deg;
+  -ms-transform: 0deg;
+  -o-transform: 0deg;
+  transform: 0deg; }
+  .jp-card.jp-card-ie-10.jp-card-flipped .jp-card-front, .jp-card.jp-card-ie-11.jp-card-flipped .jp-card-front {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  .jp-card.jp-card-ie-10.jp-card-flipped .jp-card-back, .jp-card.jp-card-ie-11.jp-card-flipped .jp-card-back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+    .jp-card.jp-card-ie-10.jp-card-flipped .jp-card-back:after, .jp-card.jp-card-ie-11.jp-card-flipped .jp-card-back:after {
+      left: 18%; }
+    .jp-card.jp-card-ie-10.jp-card-flipped .jp-card-back .jp-card-cvc, .jp-card.jp-card-ie-11.jp-card-flipped .jp-card-back .jp-card-cvc {
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      -o-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+      left: 5%; }
+    .jp-card.jp-card-ie-10.jp-card-flipped .jp-card-back .jp-card-shiny, .jp-card.jp-card-ie-11.jp-card-flipped .jp-card-back .jp-card-shiny {
+      left: 84%; }
+      .jp-card.jp-card-ie-10.jp-card-flipped .jp-card-back .jp-card-shiny:after, .jp-card.jp-card-ie-11.jp-card-flipped .jp-card-back .jp-card-shiny:after {
+        left: -480%;
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg); }
+
+.jp-card.jp-card-ie-10.jp-card-amex .jp-card-back, .jp-card.jp-card-ie-11.jp-card-amex .jp-card-back {
+  display: none; }
+
+.jp-card-logo {
+  height: 36px;
+  width: 60px;
+  font-style: italic; }
+  .jp-card-logo, .jp-card-logo:before, .jp-card-logo:after {
+    box-sizing: border-box; }
+
+.jp-card-logo.jp-card-amex {
+  text-transform: uppercase;
+  font-size: 4px;
+  font-weight: bold;
+  color: white;
+  background-image: repeating-radial-gradient(circle at center, #FFF 1px, #999 2px);
+  background-image: repeating-radial-gradient(circle at center, #FFF 1px, #999 2px);
+  border: 1px solid #EEE; }
+  .jp-card-logo.jp-card-amex:before, .jp-card-logo.jp-card-amex:after {
+    width: 28px;
+    display: block;
+    position: absolute;
+    left: 16px; }
+  .jp-card-logo.jp-card-amex:before {
+    height: 28px;
+    content: "american";
+    top: 3px;
+    text-align: left;
+    padding-left: 2px;
+    padding-top: 11px;
+    background: #267AC3; }
+  .jp-card-logo.jp-card-amex:after {
+    content: "express";
+    bottom: 11px;
+    text-align: right;
+    padding-right: 2px; }
+
+.jp-card.jp-card-amex.jp-card-flipped {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none; }
+
+.jp-card.jp-card-amex.jp-card-identified .jp-card-front:before, .jp-card.jp-card-amex.jp-card-identified .jp-card-back:before {
+  background-color: #108168; }
+
+.jp-card.jp-card-amex.jp-card-identified .jp-card-front .jp-card-logo.jp-card-amex {
+  opacity: 1; }
+
+.jp-card.jp-card-amex.jp-card-identified .jp-card-front .jp-card-cvc {
+  visibility: visible; }
+
+.jp-card.jp-card-amex.jp-card-identified .jp-card-front:after {
+  opacity: 1; }
+
+.jp-card-logo.jp-card-discover {
+  background: #FF6600;
+  color: #111;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  padding-top: 9px;
+  letter-spacing: .03em;
+  border: 1px solid #EEE; }
+  .jp-card-logo.jp-card-discover:before, .jp-card-logo.jp-card-discover:after {
+    content: " ";
+    display: block;
+    position: absolute; }
+  .jp-card-logo.jp-card-discover:before {
+    background: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    bottom: -5%;
+    right: -80%;
+    z-index: -1; }
+  .jp-card-logo.jp-card-discover:after {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    top: 10px;
+    left: 27px;
+    background-color: #FF6600;
+    background-image: -webkit-radial-gradient(#FF6600, #fff);
+    background-image: radial-gradient(  #FF6600, #fff);
+    content: "network";
+    font-size: 4px;
+    line-height: 24px;
+    text-indent: -7px; }
+
+.jp-card .jp-card-front .jp-card-logo.jp-card-discover {
+  right: 12%;
+  top: 18%; }
+
+.jp-card.jp-card-discover.jp-card-identified .jp-card-front:before, .jp-card.jp-card-discover.jp-card-identified .jp-card-back:before {
+  background-color: #86B8CF; }
+
+.jp-card.jp-card-discover.jp-card-identified .jp-card-logo.jp-card-discover {
+  opacity: 1; }
+
+.jp-card.jp-card-discover.jp-card-identified .jp-card-front:after {
+  -webkit-transition: 400ms;
+  -moz-transition: 400ms;
+  transition: 400ms;
+  content: " ";
+  display: block;
+  background-color: #FF6600;
+  background-image: -webkit-linear-gradient(#FF6600, #ffa366, #FF6600);
+  background-image: linear-gradient(#FF6600, #ffa366, #FF6600);
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  position: absolute;
+  left: 100%;
+  top: 15%;
+  margin-left: -25px;
+  box-shadow: inset 1px 1px 3px 1px rgba(0, 0, 0, 0.5); }
+
+.jp-card-logo.jp-card-visa {
+  background: white;
+  text-transform: uppercase;
+  color: #1A1876;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px; }
+  .jp-card-logo.jp-card-visa:before, .jp-card-logo.jp-card-visa:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 25%; }
+  .jp-card-logo.jp-card-visa:before {
+    background: #1A1876; }
+  .jp-card-logo.jp-card-visa:after {
+    background: #E79800; }
+
+.jp-card.jp-card-visa.jp-card-identified .jp-card-front:before, .jp-card.jp-card-visa.jp-card-identified .jp-card-back:before {
+  background-color: #191278; }
+
+.jp-card.jp-card-visa.jp-card-identified .jp-card-logo.jp-card-visa {
+  opacity: 1; }
+
+.jp-card-logo.jp-card-mastercard {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 9px;
+  line-height: 36px;
+  z-index: 1;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.6); }
+  .jp-card-logo.jp-card-mastercard:before, .jp-card-logo.jp-card-mastercard:after {
+    content: " ";
+    display: block;
+    width: 36px;
+    top: 0;
+    position: absolute;
+    height: 36px;
+    border-radius: 18px; }
+  .jp-card-logo.jp-card-mastercard:before {
+    left: 0;
+    background: #FF0000;
+    z-index: -1; }
+  .jp-card-logo.jp-card-mastercard:after {
+    right: 0;
+    background: #FFAB00;
+    z-index: -2; }
+
+.jp-card.jp-card-mastercard.jp-card-identified .jp-card-front .jp-card-logo.jp-card-mastercard, .jp-card.jp-card-mastercard.jp-card-identified .jp-card-back .jp-card-logo.jp-card-mastercard {
+  box-shadow: none; }
+
+.jp-card.jp-card-mastercard.jp-card-identified .jp-card-front:before, .jp-card.jp-card-mastercard.jp-card-identified .jp-card-back:before {
+  background-color: #0061A8; }
+
+.jp-card.jp-card-mastercard.jp-card-identified .jp-card-logo.jp-card-mastercard {
+  opacity: 1; }
+
+.jp-card-logo.jp-card-maestro {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  line-height: 36px;
+  z-index: 1;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.6); }
+  .jp-card-logo.jp-card-maestro:before, .jp-card-logo.jp-card-maestro:after {
+    content: " ";
+    display: block;
+    width: 36px;
+    top: 0;
+    position: absolute;
+    height: 36px;
+    border-radius: 18px; }
+  .jp-card-logo.jp-card-maestro:before {
+    left: 0;
+    background: #0064CB;
+    z-index: -1; }
+  .jp-card-logo.jp-card-maestro:after {
+    right: 0;
+    background: #CC0000;
+    z-index: -2; }
+
+.jp-card.jp-card-maestro.jp-card-identified .jp-card-front .jp-card-logo.jp-card-maestro, .jp-card.jp-card-maestro.jp-card-identified .jp-card-back .jp-card-logo.jp-card-maestro {
+  box-shadow: none; }
+
+.jp-card.jp-card-maestro.jp-card-identified .jp-card-front:before, .jp-card.jp-card-maestro.jp-card-identified .jp-card-back:before {
+  background-color: #0B2C5F; }
+
+.jp-card.jp-card-maestro.jp-card-identified .jp-card-logo.jp-card-maestro {
+  opacity: 1; }
+
+.jp-card-logo.jp-card-dankort {
+  width: 60px;
+  height: 36px;
+  padding: 3px;
+  border-radius: 8px;
+  border: #000000 1px solid;
+  background-color: #FFFFFF; }
+  .jp-card-logo.jp-card-dankort .dk {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+    .jp-card-logo.jp-card-dankort .dk:before {
+      background-color: #ED1C24;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 6px; }
+    .jp-card-logo.jp-card-dankort .dk:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      margin-top: -7.7px;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 7px 7px 10px 0;
+      border-color: transparent #ED1C24 transparent transparent;
+      z-index: 1; }
+  .jp-card-logo.jp-card-dankort .d, .jp-card-logo.jp-card-dankort .k {
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    display: block;
+    height: 15.4px;
+    margin-top: -7.7px;
+    background: white; }
+  .jp-card-logo.jp-card-dankort .d {
+    left: 0;
+    border-radius: 0 8px 10px 0; }
+    .jp-card-logo.jp-card-dankort .d:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      background: #ED1C24;
+      border-radius: 2px 4px 6px 0px;
+      height: 5px;
+      width: 7px;
+      margin: -3px 0 0 -4px; }
+  .jp-card-logo.jp-card-dankort .k {
+    right: 0; }
+    .jp-card-logo.jp-card-dankort .k:before, .jp-card-logo.jp-card-dankort .k:after {
+      content: '';
+      position: absolute;
+      right: 50%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      margin-right: -1px; }
+    .jp-card-logo.jp-card-dankort .k:before {
+      top: 0;
+      border-width: 8px 5px 0 0;
+      border-color: #ED1C24 transparent transparent transparent; }
+    .jp-card-logo.jp-card-dankort .k:after {
+      bottom: 0;
+      border-width: 0 5px 8px 0;
+      border-color: transparent transparent #ED1C24 transparent; }
+
+.jp-card.jp-card-dankort.jp-card-identified .jp-card-front:before, .jp-card.jp-card-dankort.jp-card-identified .jp-card-back:before {
+  background-color: #0055C7; }
+
+.jp-card.jp-card-dankort.jp-card-identified .jp-card-logo.jp-card-dankort {
+  opacity: 1; }
+
+.jp-card-logo.jp-card-elo {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  background: black;
+  color: white;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 21px;
+  font-style: normal;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding-top: 13px; }
+  .jp-card-logo.jp-card-elo .e, .jp-card-logo.jp-card-elo .l, .jp-card-logo.jp-card-elo .o {
+    display: inline-block;
+    position: relative; }
+  .jp-card-logo.jp-card-elo .e {
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+    transform: rotate(-15deg); }
+  .jp-card-logo.jp-card-elo .o {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    right: 0;
+    top: 7px;
+    border-radius: 100%;
+    background-image: -webkit-linear-gradient( yellow 50%, red 50%);
+    background-image: linear-gradient( yellow 50%, red 50%);
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    transform: rotate(40deg);
+    text-indent: -9999px; }
+    .jp-card-logo.jp-card-elo .o:before {
+      content: "";
+      position: absolute;
+      width: 49%;
+      height: 49%;
+      background: black;
+      border-radius: 100%;
+      text-indent: -99999px;
+      top: 25%;
+      left: 25%; }
+
+.jp-card.jp-card-elo.jp-card-identified .jp-card-front:before, .jp-card.jp-card-elo.jp-card-identified .jp-card-back:before {
+  background-color: #6F6969; }
+
+.jp-card.jp-card-elo.jp-card-identified .jp-card-logo.jp-card-elo {
+  opacity: 1; }
+
+.jp-card-logo.jp-card-dinersclub {
+  font-family: serif;
+  height: 40px;
+  width: 100px;
+  color: white;
+  font-size: 17px;
+  font-style: normal;
+  letter-spacing: 1px; }
+  .jp-card-logo.jp-card-dinersclub::before, .jp-card-logo.jp-card-dinersclub::after {
+    display: block;
+    position: relative; }
+  .jp-card-logo.jp-card-dinersclub::before {
+    content: 'Diners Club'; }
+  .jp-card-logo.jp-card-dinersclub::after {
+    content: 'International';
+    text-transform: uppercase;
+    font-size: 0.6em; }
+
+.jp-card.jp-card-dinersclub .jp-card-front .jp-card-logo {
+  box-shadow: none !important; }
+
+.jp-card.jp-card-dinersclub.jp-card-identified .jp-card-front:before, .jp-card.jp-card-dinersclub.jp-card-identified .jp-card-back:before {
+  background-color: #999; }
+
+.jp-card.jp-card-dinersclub.jp-card-identified .jp-card-logo.jp-card-dinersclub {
+  opacity: 1; }
+
+.jp-card-container {
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+  width: 350px;
+  max-width: 100%;
+  height: 200px;
+  margin: auto;
+  z-index: 1;
+  position: relative; }
+
+.jp-card {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 315px;
+  border-radius: 10px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 400ms linear;
+  -moz-transition: all 400ms linear;
+  transition: all 400ms linear; }
+  .jp-card > *, .jp-card > *:before, .jp-card > *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: inherit; }
+  .jp-card.jp-card-flipped {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+  .jp-card .jp-card-front, .jp-card .jp-card-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 400ms linear;
+    -moz-transition: all 400ms linear;
+    transition: all 400ms linear;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #DDD; }
+    .jp-card .jp-card-front:before, .jp-card .jp-card-back:before {
+      content: " ";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      border-radius: 10px;
+      -webkit-transition: all 400ms ease;
+      -moz-transition: all 400ms ease;
+      transition: all 400ms ease; }
+    .jp-card .jp-card-front:after, .jp-card .jp-card-back:after {
+      content: " ";
+      display: block; }
+    .jp-card .jp-card-front .jp-card-display, .jp-card .jp-card-back .jp-card-display {
+      color: white;
+      font-weight: normal;
+      opacity: 0.5;
+      -webkit-transition: opacity 400ms linear;
+      -moz-transition: opacity 400ms linear;
+      transition: opacity 400ms linear; }
+      .jp-card .jp-card-front .jp-card-display.jp-card-focused, .jp-card .jp-card-back .jp-card-display.jp-card-focused {
+        opacity: 1;
+        font-weight: 700; }
+    .jp-card .jp-card-front .jp-card-cvc, .jp-card .jp-card-back .jp-card-cvc {
+      font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+      font-size: 14px; }
+    .jp-card .jp-card-front .jp-card-shiny, .jp-card .jp-card-back .jp-card-shiny {
+      width: 50px;
+      height: 35px;
+      border-radius: 5px;
+      background: #CCC;
+      position: relative; }
+      .jp-card .jp-card-front .jp-card-shiny:before, .jp-card .jp-card-back .jp-card-shiny:before {
+        content: " ";
+        display: block;
+        width: 70%;
+        height: 60%;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background: #d9d9d9;
+        position: absolute;
+        top: 20%; }
+  .jp-card .jp-card-front .jp-card-logo {
+    position: absolute;
+    opacity: 0;
+    right: 5%;
+    top: 8%;
+    -webkit-transition: 400ms;
+    -moz-transition: 400ms;
+    transition: 400ms; }
+  .jp-card .jp-card-front .jp-card-lower {
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    bottom: 30px; }
+    @media only screen and (max-width: 768px) {
+      .bg-poker {
+  background-size: auto;
+  }
+      .jp-card .jp-card-front .jp-card-lower {
+        width: 90%;
+        left: 5%; } }
+    .jp-card .jp-card-front .jp-card-lower .jp-card-cvc {
+      visibility: hidden;
+      float: right;
+      position: relative;
+      bottom: 5px; }
+    .jp-card .jp-card-front .jp-card-lower .jp-card-number {
+      font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+      font-size: 24px;
+      clear: both;
+      margin-bottom: 30px; }
+    .jp-card .jp-card-front .jp-card-lower .jp-card-expiry {
+      font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+      letter-spacing: 0em;
+      position: relative;
+      float: right;
+      width: 25%; }
+      .jp-card .jp-card-front .jp-card-lower .jp-card-expiry:before, .jp-card .jp-card-front .jp-card-lower .jp-card-expiry:after {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        font-size: 7px;
+        white-space: pre;
+        display: block;
+        opacity: .5; }
+      .jp-card .jp-card-front .jp-card-lower .jp-card-expiry:before {
+        content: attr(data-before);
+        margin-bottom: 2px;
+        font-size: 7px;
+        text-transform: uppercase; }
+      .jp-card .jp-card-front .jp-card-lower .jp-card-expiry:after {
+        position: absolute;
+        content: attr(data-after);
+        text-align: right;
+        right: 100%;
+        margin-right: 5px;
+        margin-top: 2px;
+        bottom: 0; }
+    .jp-card .jp-card-front .jp-card-lower .jp-card-name {
+      text-transform: uppercase;
+      font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+      font-size: 20px;
+      max-height: 45px;
+      position: absolute;
+      bottom: 0;
+      width: 190px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: horizontal;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+  .jp-card .jp-card-back {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+    .jp-card .jp-card-back .jp-card-bar {
+      background-color: #444;
+      background-image: -webkit-linear-gradient(#444, #333);
+      background-image: linear-gradient(#444, #333);
+      width: 100%;
+      height: 20%;
+      position: absolute;
+      top: 10%; }
+    .jp-card .jp-card-back:after {
+      content: " ";
+      display: block;
+      background-color: #FFF;
+      background-image: -webkit-linear-gradient(#FFF, #FFF);
+      background-image: linear-gradient(#FFF, #FFF);
+      width: 80%;
+      height: 16%;
+      position: absolute;
+      top: 40%;
+      left: 2%; }
+    .jp-card .jp-card-back .jp-card-cvc {
+      position: absolute;
+      top: 40%;
+      left: 85%;
+      -webkit-transition-delay: 600ms;
+      -moz-transition-delay: 600ms;
+      transition-delay: 600ms; }
+    .jp-card .jp-card-back .jp-card-shiny {
+      position: absolute;
+      top: 66%;
+      left: 2%; }
+      .jp-card .jp-card-back .jp-card-shiny:after {
+        content: "This card has been issued by Jesse Pollak and is licensed for anyone to use anywhere for free. It comes with no warranty. For support issues, please visit: github.com/jessepollak/card.";
+        position: absolute;
+        left: 120%;
+        top: 5%;
+        color: white;
+        font-size: 7px;
+        width: 230px;
+        opacity: .5; }
+  .jp-card.jp-card-identified {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); }
+    .jp-card.jp-card-identified .jp-card-front, .jp-card.jp-card-identified .jp-card-back {
+      background-color: #000;
+      background-color: rgba(0, 0, 0, 0.5); }
+      .jp-card.jp-card-identified .jp-card-front:before, .jp-card.jp-card-identified .jp-card-back:before {
+        -webkit-transition: all 400ms ease;
+        -moz-transition: all 400ms ease;
+        transition: all 400ms ease;
+        background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 1px, rgba(255, 255, 255, 0) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(210deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-radial-gradient(circle at 90% 20%, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-radial-gradient(circle at 15% 80%, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), -webkit-linear-gradient(-245deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0) 90%);
+        background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 1px, rgba(255, 255, 255, 0) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(210deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-radial-gradient(circle at 90% 20%, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-radial-gradient(circle at 15% 80%, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), linear-gradient(-25deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0) 90%);
+        opacity: 1; }
+      .jp-card.jp-card-identified .jp-card-front .jp-card-logo, .jp-card.jp-card-identified .jp-card-back .jp-card-logo {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3); }
+    .jp-card.jp-card-identified.no-radial-gradient .jp-card-front:before, .jp-card.jp-card-identified.no-radial-gradient .jp-card-back:before {
+      background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 1px, rgba(255, 255, 255, 0) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(210deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), -webkit-linear-gradient(-245deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0) 90%);
+      background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 1px, rgba(255, 255, 255, 0) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.03) 4px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), repeating-linear-gradient(210deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px), linear-gradient(-25deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0) 90%); }
+</style>
+</head>
+<body class="body">
+  <div class="position-fixed bottom-0 right-0 p-3" style="z-index: 11">
+    <div id="liveToast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="alert alert-info fade in text-center">Signed in successfully.</div>
+    </div>
+  </div>
+<div class="icon-load">
+<div class="sk-folding-cube">
+<div class="sk-cube1 sk-cube"></div>
+<div class="sk-cube2 sk-cube"></div>
+<div class="sk-cube4 sk-cube"></div>
+<div class="sk-cube3 sk-cube"></div>
+</div>
+</div>
+<!-- Off-Canvas Category Menu -->
+<div class="offcanvas-container" id="shop-categories">
+<div class="offcanvas-header">
+<h3 class="offcanvas-title">Solved Ranges</h3>
+</div>
+<nav class="offcanvas-menu">
+<ul class="menu">
+<li class="has-children">
+<span>
+<a href="http://localhost:3000/my_solutions#">APPS</a>
+<span class="sub-menu-toggle"></span>
+</span>
+<ul class="offcanvas-submenu"><li class="back-btn"><a href="http://localhost:3000/my_solutions#">Back</a></li>
+</ul>
+</li>
+<li class="has-children">
+<span>
+<a href="http://localhost:3000/my_solutions#">BUNDLE</a>
+<span class="sub-menu-toggle"></span>
+</span>
+<ul class="offcanvas-submenu"><li class="back-btn"><a href="http://localhost:3000/my_solutions#">Back</a></li>
+</ul>
+</li>
+<li class="has-children">
+<span>
+<a href="http://localhost:3000/my_solutions#">CASH</a>
+<span class="sub-menu-toggle"></span>
+</span>
+<ul class="offcanvas-submenu"><li class="back-btn"><a href="http://localhost:3000/my_solutions#">Back</a></li>
+<li>
+<a href="http://localhost:3000/solutions/6max-100bb-Limit">6max 100bb Limit</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/3max-10bb-acr">3max 10bb acr</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/3max-20bb-ACR">3max 20bb ACR</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/3max-15bb-acr">3max 15bb acr</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/hu-acr-15bb">hu acr 15bb</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/hu-20bb-acr">hu 20bb acr</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/HU-ACR-10bb">HU ACR 10bb</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/6max-Hyper-16bb">6max Hyper 16bb</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/8max-20bb">8max 20bb</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/5max-testtt">5max testtt</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/4way-str">4way str</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/hu_100bb">HU 100bb</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/6_max_postflop_solutions">6max GG 100bb Flop Addon</a>
+</li>
+</ul>
+</li>
+<li class="has-children">
+<span>
+<a href="http://localhost:3000/my_solutions#">ICM</a>
+<span class="sub-menu-toggle"></span>
+</span>
+<ul class="offcanvas-submenu"><li class="back-btn"><a href="http://localhost:3000/my_solutions#">Back</a></li>
+</ul>
+</li>
+<li class="has-children">
+<span>
+<a href="http://localhost:3000/my_solutions#">MTT</a>
+<span class="sub-menu-toggle"></span>
+</span>
+<ul class="offcanvas-submenu"><li class="back-btn"><a href="http://localhost:3000/my_solutions#">Back</a></li>
+</ul>
+</li>
+<li class="has-children">
+<span>
+<a href="http://localhost:3000/my_solutions#">PLO</a>
+<span class="sub-menu-toggle"></span>
+</span>
+<ul class="offcanvas-submenu"><li class="back-btn"><a href="http://localhost:3000/my_solutions#">Back</a></li>
+<li>
+<a href="http://localhost:3000/solutions/hu-4c-plo-40bb">HU 40bb 4c PLO</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/6max_100bb_mtt_plo">6max 100bb PLO MTT</a>
+</li>
+</ul>
+</li>
+<li class="has-children">
+<span>
+<a href="http://localhost:3000/my_solutions#">PLO5</a>
+<span class="sub-menu-toggle"></span>
+</span>
+<ul class="offcanvas-submenu"><li class="back-btn"><a href="http://localhost:3000/my_solutions#">Back</a></li>
+<li>
+<a href="http://localhost:3000/solutions/hu_tree.png">HU 40bb 5c PLO</a>
+</li>
+</ul>
+</li>
+<li class="has-children">
+<span>
+<a href="http://localhost:3000/my_solutions#">SHORT DECK</a>
+<span class="sub-menu-toggle"></span>
+</span>
+<ul class="offcanvas-submenu"><li class="back-btn"><a href="http://localhost:3000/my_solutions#">Back</a></li>
+<li>
+<a href="http://localhost:3000/solutions/3max-SD-ICM-BTN9-20-30">3max SD ICM BTN9-20-30</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/50a_shortdeck_4max_solutions">4max 50a ShortDeck</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/4max-50a-SD">4max 50a SD</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/hu-7x-iso">hu 7x iso</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/hu_sd_postflop_solutions">HU 100a ShortDeck Postflop (Yearly)</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/4_max_postflop_sd_solutions">4max 50a ShortDeck Postflop (Yearly)</a>
+</li>
+</ul>
+</li>
+<li class="has-children">
+<span>
+<a href="http://localhost:3000/my_solutions#">SPINS</a>
+<span class="sub-menu-toggle"></span>
+</span>
+<ul class="offcanvas-submenu"><li class="back-btn"><a href="http://localhost:3000/my_solutions#">Back</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+<!-- Off-Canvas Mobile Menu -->
+<div class="offcanvas-container" id="mobile-menu">
+<nav class="offcanvas-menu">
+<ul class="menu">
+<li class="has-children active">
+<span>
+<a href="http://localhost:3000/">
+<span>Home</span>
+</a>
+</span>
+</li>
+<li class="has-children">
+<span>
+<a href="http://localhost:3000/solutions?filter_format=217">
+<span>SOLVED RANGES</span>
+</a>
+</span>
+</li>
+<li class="has-children">
+<span>
+<a data-turbolinks="false" href="http://localhost:3000/online/training/products">
+<span>GTO LIVE! STORE</span>
+</a>
+</span>
+</li>
+<li class="has-children">
+<span>
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=&amp;filter_format=217">
+<span>ONLINE RANGE VIEWER</span>
+</a>
+</span>
+</li>
+<li class="has-children">
+<span>
+<a data-turbolinks="false" href="http://localhost:3000/my_solutions">
+<span>MY SOLUTIONS</span>
+</a>
+</span>
+</li>
+<li class="has-children">
+<span>
+<a data-turbolinks="false" href="http://localhost:3000/my_gto_live">
+<span>MY GTO LIVE!</span>
+</a>
+</span>
+</li>
+</ul>
+</nav>
+</div>
+<!-- Topbar -->
+<!-- <div class="topbar neg-marg">
+<div class="topbar-column" style="width:25%">
+<a class="hidden-md-down" href="mailto:support@rangeconverter.com"><i class="icon-mail"></i>&nbsp; support@rangeconverter.com
+</a>
+<a class="social-button sb-twitter shape-none sb-dark hidden-sm-down" href="http://twitter.com/rangeconverter" target="_blank">
+<i class="socicon-twitter"></i>
+</a>
+<a class="social-button sb-youtube shape-none sb-dark hidden-sm-down" href="https://www.youtube.com/channel/UCsZTqf11fZtePq4SPqWCTmA" target="_blank">
+<i class="socicon-youtube"></i>
+</a>
+<a class="offcanvas-toggle menu-toggle hidden-md-up" data-toggle="offcanvas" href="http://localhost:3000/my_solutions#mobile-menu"></a>
+</div>
+<div class="topbar-column text-center hidden-md-up">
+<a class="site-logo" href="http://localhost:3000/">
+<strong><i class="fa fa-exchange"></i>&nbsp;RangeConverter</strong>
+</a>
+</div>
+<div class="topbar-column text-right hidden-md-up">
+<a data-turbolinks="false" href="http://localhost:3000/my_solutions">
+<i class="icon-head"></i>
+</a>
+</div>
+<div class="topbar-column">
+<a rel="nofollow" data-method="delete" href="http://localhost:3000/users/sign_out">Log out</a>
+</div>
+</div> -->
+<nav class="navbar navbar-default hidden-md-up" style="border: none;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img style="width: 42px;height: 42px;border-radius: inherit; margin: 10px;" src="./images/user_icon.png">
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<header class="navbar navbar-sticky hidden-sm-down" style="margin: 0px 20px;" id="header-nav">
+<div class="site-branding">
+<div class="inner">
+<!-- Off-Canvas Toggle (#shop-categories) -->
+<!-- <a class="offcanvas-toggle cats-toggle" data-toggle="offcanvas" href="http://localhost:3000/my_solutions#shop-categories"></a> -->
+<!-- Off-Canvas Toggle (#mobile-menu) -->
+<a class="offcanvas-toggle menu-toggle" data-toggle="offcanvas" href="http://localhost:3000/my_solutions#mobile-menu"></a>
+<!-- Site Logo -->
+<a class="site-logo" href="http://localhost:3000/">
+<strong><i class="fa fa-exchange"></i>&nbsp;RangeConverter</strong>
+<!-- = image_tag("logo/logo.png", alt: "Unishop") -->
+</a>
+</div>
+</div>
+<!-- Main Navigation -->
+<nav class="site-menu">
+<ul style="padding-left: 25%;">
+<li class="has-submenu" style="padding-top: 28.5px;">
+<a href="http://localhost:3000/solutions?filter_format=217">Solved Ranges</a>
+<ul class="sub-menu">
+<li class="has-children">
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=apps&amp;filter_format=">APPS</a>
+<ul class="sub-menu">
+</ul>
+</li>
+<li class="has-children">
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=bundle&amp;filter_format=">BUNDLE</a>
+<ul class="sub-menu">
+</ul>
+</li>
+<li class="has-children">
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=cash&amp;filter_format=">CASH</a>
+<ul class="sub-menu">
+<li class="has-children">
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=cash&amp;player_count=2">Heads Up</a>
+<ul class="sub-menu">
+<li>
+<a href="http://localhost:3000/solutions/hu_100bb">HU 100bb</a>
+</li>
+</ul>
+</li>
+<li class="has-children">
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=cash&amp;player_count=6">6 Max</a>
+<ul class="sub-menu">
+<li>
+<a href="http://localhost:3000/solutions/6_max_postflop_solutions">6max GG 100bb Flop Addon</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children">
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=icm&amp;filter_format=">ICM</a>
+<ul class="sub-menu">
+</ul>
+</li>
+<li class="has-children">
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=mtt&amp;filter_format=">MTT</a>
+<ul class="sub-menu">
+</ul>
+</li>
+<li class="has-children">
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=plo&amp;filter_format=">PLO</a>
+<ul class="sub-menu">
+<li class="has-children">
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=plo&amp;player_count=2">Heads Up</a>
+<ul class="sub-menu">
+<li>
+<a href="http://localhost:3000/solutions/hu-4c-plo-40bb">HU 40bb 4c PLO</a>
+</li>
+</ul>
+</li>
+<li class="has-children">
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=plo&amp;player_count=6">6 Max</a>
+<ul class="sub-menu">
+<li>
+<a href="http://localhost:3000/solutions/6max_100bb_mtt_plo">6max 100bb PLO MTT</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children">
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=plo5&amp;filter_format=">PLO5</a>
+<ul class="sub-menu">
+<li class="has-children">
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=plo5&amp;player_count=2">Heads Up</a>
+<ul class="sub-menu">
+<li>
+<a href="http://localhost:3000/solutions/hu_tree.png">HU 40bb 5c PLO</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children">
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=short_deck&amp;filter_format=">SHORT DECK</a>
+<ul class="sub-menu">
+<li class="has-children">
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=short_deck&amp;player_count=2">Heads Up</a>
+<ul class="sub-menu">
+<li>
+<a href="http://localhost:3000/solutions/hu_sd_postflop_solutions">HU 100a ShortDeck Postflop (Yearly)</a>
+</li>
+</ul>
+</li>
+<li class="has-children">
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=short_deck&amp;player_count=6">6 Max</a>
+<ul class="sub-menu">
+<li>
+<a href="http://localhost:3000/solutions/4_max_postflop_sd_solutions">4max 50a ShortDeck Postflop (Yearly)</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children">
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=spins&amp;filter_format=">SPINS</a>
+<ul class="sub-menu">
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a data-turbolinks="false" href="http://localhost:3000/online/training/products">
+<span>GTO Live! Trainer</span>
+</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions?page=&amp;filter_gametype=&amp;filter_format=217">
+<span>Online Range Viewer</span>
+</a>
+</li>
+<li class="hidden-md-screen">
+<a href="http://localhost:3000/my_solutions#">
+<span>Convert</span>
+</a>
+<ul class="sub-menu">
+<li>
+<a href="http://localhost:3000/conversion/new?locale=us">
+<span>Pio/CREV/PPT</span>
+</a>
+</li>
+<li>
+<a href="http://localhost:3000/solutions/mkr_to_pio?locale=us">
+<span>Monker To Pio</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="hidden-md-screen">
+<a href="http://localhost:3000/guides">
+<span>Guides</span>
+</a>
+<ul class="sub-menu">
+<li>
+<a href="http://localhost:3000/faq">
+<span>FAQ</span>
+</a>
+</li>
+<li>
+<a href="http://localhost:3000/guides">
+<span>Videos</span>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a data-turbolinks="false" href="http://localhost:3000/my_solutions">
+<span>My Solutions</span>
+</a>
+</li>
+<li>
+<a data-turbolinks="false" href="http://localhost:3000/my_gto_live">
+<span>My GTO Live!</span>
+</a>
+</li>
+</ul>
+</nav>
+<!-- Toolbar -->
+<div class="toolbar">
+<div class="inner">
+<div class="tools">
+<div class="account">
+<a href="http://localhost:3000/my_solutions#"></a>
+<img style="width: 42px;height: 42px;border-radius: inherit;" src="./images/user_icon.png">
+<ul class="toolbar-dropdown">
+<li class="sub-menu-user">
+<div class="user-info">
+<h6 class="user-name">craig@rangeconverter.com</h6>
+</div>
+</li>
+<li>
+<a data-turbolinks="false" href="http://localhost:3000/my_solutions">My Solutions</a>
+</li>
+<li>
+<a data-turbolinks="false" href="http://localhost:3000/my_gto_live">My GTO Live</a>
+</li>
+<li>
+<a href="http://localhost:3000/my_preferences">My Settings</a>
+</li>
+<li>
+<a href="http://localhost:3000/filters?locale=us">Filters</a>
+</li>
+<li class="sub-menu-separator"></li>
+<li>
+<a rel="nofollow" data-method="delete" href="http://localhost:3000/users/sign_out">Log out</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div aria-hidden="true" aria-labelledby="uploadSimModalLabel" class="modal fade ali" id="uploadSimModal" role="dialog" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content modal" style="width: 900px;">
+<div class="modal-header" style="margin-top: -100px;">
+<h5 class="modal-title" id="uploadSimModal">Upload Custom Sim</h5>
+<div aria-label="Close" class="close" data-dismiss="modal" id="uploadSimModalCloseBtn" type="button">
+<span aria-hidden="true">×</span>
+</div>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="col-xs-12">
+<form id="custom_sim_upload" html="{:class=&gt;&quot;form-horizontal&quot;}" enctype="multipart/form-data" action="http://localhost:3000/online/solutions" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="jc5iCtt0bPaVkbkmdKTkMzNXr0iO1uRfa3OScNx7jXiy+JW4x7fDj2QJw4N7Ei7OmjrlsuYngGVCtT3U4C0TQg==">
+<div class="row justify-content-center">
+<div class="col-sm-12">
+<div class="form-group">
+<label><span class="translation_missing" title="translation missing: en.game_name">Game Name</span></label>
+<input type="text" name="game_name" id="game_name">
+</div>
+<div class="form-group">
+<label><span class="translation_missing" title="translation missing: en.player_count">Player Count</span></label>
+<select name="player_count" id="player_count"><option value="9">9</option>
+<option value="8">8</option>
+<option value="7">7</option>
+<option value="6">6</option>
+<option value="5">5</option>
+<option value="4">4</option>
+<option value="3">3</option>
+<option value="2">2</option></select>
+</div>
+<div class="form-group">
+<label><span class="translation_missing" title="translation missing: en.game_type">Game Type</span></label>
+<select name="game_type" id="game_type"><option value="Holdem">Holdem</option>
+<option value="ShortDeck">ShortDeck</option></select>
+</div>
+<div class="form-group">
+<label>Total Ante (in chips)</label>
+<input type="text" name="antes" id="antes" value="0">
+</div>
+<div class="form-group">
+<label><span class="translation_missing" title="translation missing: en.straddle">Straddle</span></label>
+<input type="text" name="straddle" id="straddle" value="0">
+</div>
+<div class="form-group">
+<label>Chip settings (Default 1,2)</label>
+<input type="text" name="chips" id="chips" value="1,2">
+</div>
+<div class="form-group">
+<label>Public?</label>
+<input type="checkbox" name="public" id="public" value="1">
+</div>
+</div>
+<div class="col-sm-12">
+<div class="form-group">
+<input type="file" name="solution_zip" id="solution_zip">
+</div>
+<strong style="color: red;">Filetype must be ZIP and can contain only rng files or will be rejected.</strong>
+<br>
+<br>
+</div>
+<div class="col-sm-12">
+<strong id="upload_response"></strong>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="alert alert-info text-center" role="alert">
+Please make sure all chip settings, ante and straddle information is correct before uploading.
+<a href="https://youtu.be/AMx_K3gsFpA" target="_blank">Please watch the tutorial if unsure.</a>
+</div>
+</div>
+<input type="submit" name="commit" value="Upload" class="button btn btn-primary" data-disable-with="Upload">
+</form>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div aria-hidden="true" aria-labelledby="managePlanModal" class="modal fade ali" id="managePlanModal" role="dialog" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content modal" style="width: 900px;">
+<div class="modal-header" style="margin-top: -100px;">
+<h5 class="modal-title" id="managePlanModal">My Custom Sim Plans</h5>
+<div aria-label="Close" class="close" data-dismiss="modal" id="managePlanModalCloseBtn" type="button">
+<span aria-hidden="true">×</span>
+</div>
+</div>
+<div class="modal-body">
+<p>Adding a sim plan allows you to upload and view your own Monkersolver sims in our online viewer.</p>
+<div class="row">
+<div class="col-sm-12">
+<h5>Add Plan</h5>
+</div>
+<div class="col-sm-6">
+<input type="submit" name="plan_GtQbkgwevtzgEe" value="5 sim upload $99/month" class="btn btn-add-sims stripeSubsPurchase" data-disable-with="5 sim upload $99/month">
+</div>
+<div class="col-sm-6">
+<input type="submit" name="plan_GtQajp2RlKZWoO" value="3 sim upload $79/month" class="btn btn-add-sims stripeSubsPurchase" data-disable-with="3 sim upload $79/month">
+</div>
+<div class="col-sm-6">
+<input type="submit" name="plan_GtQZvZPG9jjMfw" value="1 sim upload $39/month" class="btn btn-add-sims stripeSubsPurchase" data-disable-with="1 sim upload $39/month">
+</div>
+<div class="col-sm-6">
+<input type="submit" name="plan_GtQbqmJygh4rHx" value="10 sim upload $189/month" class="btn btn-add-sims stripeSubsPurchase" data-disable-with="10 sim upload $189/month">
+</div>
+</div>
+<div class="row padding-top-1x">
+<div class="col-sm-12">
+<h5>Active Plans</h5>
+<p>You do not have any active upload plans.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div>
+  <div class="padding-top-4x padding-bottom-4x bg-poker">
+    <div class="container text-left text-md-right">
+      <h2 class="title-purchased">
+      <span class="text-white">My Solutions /</span>
+      <a class="text-muted" data-turbolinks="false" href="http://localhost:3000/my_gto_live">My GTO Live!</a>
+      </h2>
+      <h3>BROWSE YOUR SOLUTIONS HERE</h3>
+      <a data-target="#managePlanModal" data-toggle="modal" href="http://localhost:3000/my_solutions#managePlanModal">Manage Custom Sim Plans</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+<div class="row padding-top-2x">
+<div class="col-12">
+  <div>
+    <div class="text-center text-md-left">
+      <a class="text-muted text-normal text-uppercase" data-target="#cash_section" data-turbolinks="false" href="http://localhost:3000/my_solutions#cash_section">Recently Viewed</a>
+      |
+      <a class="text-muted text-normal text-uppercase" data-target="#cash_section" data-turbolinks="false" href="http://localhost:3000/my_solutions#cash_section">Most Viewed</a>
+      |
+      <a class="text-muted text-normal text-uppercase" data-target="#cash_section" data-turbolinks="false" href="http://localhost:3000/my_solutions#cash_section">Cash</a>
+      |
+      <a class="text-muted text-normal text-uppercase" data-target="#short_deck_section" data-turbolinks="false" href="http://localhost:3000/my_solutions#short_deck_section">Short deck</a>
+      |
+      <a class="text-muted text-normal text-uppercase" data-target="#plo_section" data-turbolinks="false" href="http://localhost:3000/my_solutions#plo_section">Plo</a>
+      |
+      <a class="text-muted text-normal text-uppercase" data-target="#plo5_section" data-turbolinks="false" href="http://localhost:3000/my_solutions#plo5_section">Plo5</a>
+    </div>
+    <div>
+
+    </div>
+  </div>
+  <hr class="mt-2 margin-bottom-1x">
+</div>
+<div class="col-xs-12">
+<section id="solution">
+<div class="row">
+<div class="col col-xs-12 row">
+  <div class="col-12">
+<h6 class="text-muted text-normal text-uppercase mt-1">Recently Viewed</h6>
+<hr class="margin-bottom-1x">
+</div>
+
+<div class="col-4 col-md-3 solution-item wow fadeInUp padding-bottom-1x" style="height:fit-content;">
+<div class="solution-wrap panel recent-solution-info">
+<figure>
+<img alt="" class="img-fluid" src="./images/100a-shortdeck-hu-4084a0ae8a24808ebf78f6b01e2a2adebeb0316e86d2f64be17900a840f6e9c7.png">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/7" title="Online Browser">
+<span style="font-size:14px">Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" style="padding: 10px;">
+<p class="text-muted">HU ShortDeck 100a</p>
+</div>
+</div>
+</div>
+<div class="col-4 col-md-3 solution-item wow fadeInUp padding-bottom-1x" style="height:fit-content;">
+<div class="solution-wrap panel recent-solution-info">
+<figure>
+<img alt="" class="img-fluid" src="./images/headsup-tree-cc6c3dd6f384d7be98ec56a298d1134d543bbe9f1bf516e04becbc28ce514aa4.png">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/1" title="Online Browser">
+<span style="font-size:14px">Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" style="padding: 10px;">
+<p class="text-muted">HU 100bb</p>
+</div>
+</div>
+</div>
+<div class="col-4 col-md-3 solution-item wow fadeInUp padding-bottom-1x" style="height:fit-content;">
+<div class="solution-wrap panel recent-solution-info">
+<figure>
+<img alt="" class="img-fluid" src="./images/4max-sd-50a-5d27fb05484279faf765070089f9fb6d16b07194b1bd137cb87d7ff053428f2e.png">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/10" title="Online Browser">
+<span style="font-size:14px">Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" style="padding: 10px;">
+<p class="text-muted">4max 50a ShortDeck</p>
+</div>
+</div>
+</div>
+<div class="col-4 col-md-3 solution-item wow fadeInUp padding-bottom-1x" style="height:fit-content;">
+<div class="solution-wrap panel recent-solution-info">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/186" title="Online Browser">
+<span style="font-size:14px">Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" style="padding: 10px;">
+<p class="text-muted">Custom: HU Hyper 10bb</p>
+</div>
+</div>
+</div>
+
+</div>
+<!-- <div class="col-md-3 col-xs-12">
+<h6 class="text-muted text-normal text-uppercase mt-2">Most Viewed</h6>
+<hr class="margin-bottom-1x">
+<a class="text-muted text-normal" data-turbolinks="false" href="http://localhost:3000/online/solutions/7">HU ShortDeck 100a</a>
+<br>
+<a class="text-muted text-normal" data-turbolinks="false" href="http://localhost:3000/online/solutions/10">4max 50a ShortDeck</a>
+<br>
+<a class="text-muted text-normal" data-turbolinks="false" href="http://localhost:3000/online/solutions/189">6max Hyper </a>
+<br>
+<a class="text-muted text-normal" data-turbolinks="false" href="http://localhost:3000/online/solutions/1">HU 100bb</a>
+<br>
+<a class="text-muted text-normal" data-turbolinks="false" href="http://localhost:3000/online/solutions/196">3max 15bb acr</a>
+<br>
+<a class="text-muted text-normal" data-turbolinks="false" href="http://localhost:3000/online/solutions/194">3max 20bb ACR</a>
+<br>
+<a class="text-muted text-normal" data-turbolinks="false" href="http://localhost:3000/online/solutions/186">HU Hyper 10bbxv</a>
+<br>
+<a class="text-muted text-normal" data-turbolinks="false" href="http://localhost:3000/online/solutions/186">Custom: HU Hyper 10bb</a>
+<br>
+<a class="text-muted text-normal" data-turbolinks="false" href="http://localhost:3000/online/solutions/195">3max 10bb acr</a>
+<br>
+<a class="text-muted text-normal" data-turbolinks="false" href="http://localhost:3000/online/solutions/193">sd 3max</a>
+<br>
+</div> -->
+</div>
+</section>
+</div>
+<div class="col-xs-12">
+  <section id="solution">
+  <div class="row padding-top-1x">
+  <div class="col col-xs-12 row">
+    <div class="col-12">
+      <h6 class="text-muted text-normal text-uppercase mt-2">Most Viewed</h6>
+      <hr class="margin-bottom-1x">
+    </div>
+  <div class="col-4 col-md-3 solution-item wow fadeInUp padding-bottom-1x" style="height:fit-content;">
+  <div class="solution-wrap panel recent-solution-info">
+  <figure>
+  <img alt="" class="img-fluid" src="./images/100a-shortdeck-hu-4084a0ae8a24808ebf78f6b01e2a2adebeb0316e86d2f64be17900a840f6e9c7.png">
+  <a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/7" title="Online Browser">
+  <span style="font-size:14px">Browse Solution Online</span>
+  </a>
+  </figure>
+  <div class="solution-info" style="padding: 10px;">
+  <p class="text-muted">HU ShortDeck 100a</p>
+  </div>
+  </div>
+  </div>
+  <div class="col-4 col-md-3 solution-item wow fadeInUp padding-bottom-1x" style="height:fit-content;">
+  <div class="solution-wrap panel recent-solution-info">
+  <figure>
+  <img alt="" class="img-fluid" src="./images/headsup-tree-cc6c3dd6f384d7be98ec56a298d1134d543bbe9f1bf516e04becbc28ce514aa4.png">
+  <a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/1" title="Online Browser">
+  <span style="font-size:14px">Browse Solution Online</span>
+  </a>
+  </figure>
+  <div class="solution-info" style="padding: 10px;">
+  <p class="text-muted">HU 100bb</p>
+  </div>
+  </div>
+  </div>
+  <div class="col-4 col-md-3 solution-item wow fadeInUp padding-bottom-1x" style="height:fit-content;">
+  <div class="solution-wrap panel recent-solution-info">
+  <figure>
+  <img alt="" class="img-fluid" src="./images/4max-sd-50a-5d27fb05484279faf765070089f9fb6d16b07194b1bd137cb87d7ff053428f2e.png">
+  <a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/10" title="Online Browser">
+  <span style="font-size:14px">Browse Solution Online</span>
+  </a>
+  </figure>
+  <div class="solution-info" style="padding: 10px;">
+  <p class="text-muted">4max 50a ShortDeck</p>
+  </div>
+  </div>
+  </div>
+  <div class="col-4 col-md-3 solution-item wow fadeInUp padding-bottom-1x" style="height:fit-content;">
+  <div class="solution-wrap panel recent-solution-info">
+  <figure>
+  <img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+  <a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/186" title="Online Browser">
+  <span style="font-size:14px">Browse Solution Online</span>
+  </a>
+  </figure>
+  <div class="solution-info" style="padding: 10px;">
+  <p class="text-muted">Custom: HU Hyper 10bb</p>
+  </div>
+  </div>
+  </div>
+  
+  </div>
+  </div>
+  </section>
+  </div>
+</div>
+<div class="container">
+<div class="row">
+<section id="solution">
+<div class="container">
+<div class="row solution-container">
+<!-- <div class="col-md-4 solution-item wow fadeInUp hidden-xs">
+<div class="solution-wrap">
+<figure>
+<img alt="" class="img-fluid" src="./images/6max-100bb-2e5e36a9f24e22448b7ca65502cfab9bb91485c64fe0c726a1957f473757c411.png">
+<a class="link-details" data-target="#uploadSimModal" data-toggle="modal" href="http://localhost:3000/my_solutions#uploadSimModal">
+<span>Add your own sim!</span>
+</a>
+</figure>
+<div class="solution-info">
+<h4 style="margin-top:-5px;">
+<a data-target="#uploadSimModal" data-toggle="modal" href="http://localhost:3000/my_solutions#uploadSimModal">Upload Custom Sim</a>
+</h4>
+</div>
+</div>
+</div> -->
+<div class="col-md-4 hidden-xs"></div>
+<div class="row" id="cash_section" style="width: 100%">
+<div class="col-xs-12 text-center">
+<h6 class="text-muted text-normal text-uppercase pt-2">Cash</h6>
+<hr class="margin-bottom-1x">
+</div>
+</div>
+<div class="row">
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/212" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/6max-100bb-Limit?locale=us">6max 100bb Limit</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/195" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/3max-10bb-acr?locale=us">3max 10bb acr</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/194" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/3max-20bb-ACR?locale=us">3max 20bb ACR</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/196" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/3max-15bb-acr?locale=us">3max 15bb acr</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/198" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/hu-acr-15bb?locale=us">hu acr 15bb</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/199" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/hu-20bb-acr?locale=us">hu 20bb acr</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/186" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/?locale=us">Custom: HU Hyper 10bb</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/186" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/?locale=us">HU Hyper 10bbxv</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/204" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/4way-str?locale=us">4way str</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/205" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/8max-20bb?locale=us">8max 20bb</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/208" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/5max-testtt?locale=us">5max testtt</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/201" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/6max-Hyper-16bb?locale=us">6max Hyper 16bb</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/189" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/?locale=us">6max Hyper </a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/197" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/HU-ACR-10bb?locale=us">HU ACR 10bb</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/217" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/6_max_postflop_solutions?locale=us">6max GG 100bb Flop Addon</a>
+</h4>
+<p>Expired: 2021-01-31 23:01:31 UTC</p>
+<div class="renew_sub" data-id="2" id="renew_324"><a href="http://localhost:3000/my_solutions#">Renew?</a></div>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/headsup-tree-cc6c3dd6f384d7be98ec56a298d1134d543bbe9f1bf516e04becbc28ce514aa4.png">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/221" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" style="background: #e1e1e1;">
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/my_solutions#">6max 500z</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/6max-tree-20ed6fd7f15accbb63c74edec9c46e6270a1356eddcfe5d6804906df086e4634.png">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/217" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" style="background: #e1e1e1;">
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/my_solutions#">6max 100bb GG 3b/f</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/headsup-tree-cc6c3dd6f384d7be98ec56a298d1134d543bbe9f1bf516e04becbc28ce514aa4.png">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/219" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" style="background: #e1e1e1;">
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/my_solutions#">3max 500z</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-4 col-md-4 fadeInUp filter-cash solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/headsup-tree-cc6c3dd6f384d7be98ec56a298d1134d543bbe9f1bf516e04becbc28ce514aa4.png">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/1" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/hu_100bb?locale=us">HU 100bb</a>
+</h4>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row" id="short_deck_section" style="width: 100%">
+<div class="col-xs-12 text-center">
+<h6 class="text-muted text-normal text-uppercase pt-2">Short deck</h6>
+<hr class="margin-bottom-1x">
+</div>
+</div>
+<div class="row">
+<div class="col-4 col-md-4 fadeInUp filter-short_deck solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/193" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" style="background: #e1e1e1;">
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/my_solutions#">sd 3max</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-md-4 fadeInUp filter-short_deck solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/206" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/hu-7x-iso?locale=us">hu 7x iso</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-md-4 fadeInUp filter-short_deck solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/210" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/4max-50a-SD?locale=us">4max 50a SD</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-md-4 fadeInUp filter-short_deck solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/4max-sd-50a-5d27fb05484279faf765070089f9fb6d16b07194b1bd137cb87d7ff053428f2e.png">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/10" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/50a_shortdeck_4max_solutions?locale=us">4max 50a ShortDeck</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-md-4 fadeInUp filter-short_deck solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/210" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/4_max_postflop_sd_solutions?locale=us">4max 50a ShortDeck Postflop (Yearly)</a>
+</h4>
+<p>Expired: 2021-01-31 23:01:44 UTC</p>
+<div class="renew_sub" data-id="226" id="renew_326"><a href="http://localhost:3000/my_solutions#">Renew?</a></div>
+</div>
+</div>
+</div>
+<div class="col-4 col-md-4 fadeInUp filter-short_deck solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/postflop_browser-058f7d2b63f6886d5658e9e43442e54869f522d279a70f8b2380d57bab56cb90.jpg">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/7" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/hu_sd_postflop_solutions?locale=us">HU 100a ShortDeck Postflop (Yearly)</a>
+</h4>
+<p>Expired: 2021-01-31 23:01:43 UTC</p>
+<div class="renew_sub" data-id="4" id="renew_325"><a href="http://localhost:3000/my_solutions#">Renew?</a></div>
+</div>
+</div>
+</div>
+<div class="col-4 col-md-4 fadeInUp filter-short_deck solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/100a-shortdeck-hu-4084a0ae8a24808ebf78f6b01e2a2adebeb0316e86d2f64be17900a840f6e9c7.png">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/7" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" style="background: #e1e1e1;">
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/my_solutions#">HU ShortDeck 100a</a>
+</h4>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row" id="plo_section" style="width: 100%">
+<div class="col-xs-12 text-center">
+<h6 class="text-muted text-normal text-uppercase pt-2">Plo</h6>
+<hr class="margin-bottom-1x">
+</div>
+</div>
+<div class="row">
+<div class="col-4 col-md-4 fadeInUp filter-plo solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/6max_100bb_mtt_plo-691642732d4ba68111b5def7568fe349dcfb49a05eef4a9a84fe1d9b5cf67e8a.png">
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/6max_100bb_mtt_plo?locale=us">6max 100bb PLO MTT</a>
+</h4>
+<p><a class="link-details" style="color:#666666;" target="_blank" href="http://drive.google.com/file/d/1CocbgF8NGzmTwSbEn8xvMC8K8mYIedcA/view">MonkerSolver Saved Run</a></p>
+</div>
+</div>
+</div>
+<div class="col-4 col-md-4 fadeInUp filter-plo solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/hu-tree-13ab7a3441df6c06d00b3e9a33b5cf2ac6ab25939e9c41493fd2ff8a8b94daeb.png">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/223" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/hu-4c-plo-40bb?locale=us">HU 40bb 4c PLO</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-md-4 fadeInUp filter-plo solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/hu-tree-13ab7a3441df6c06d00b3e9a33b5cf2ac6ab25939e9c41493fd2ff8a8b94daeb.png">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/224" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" style="background: #e1e1e1;">
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/my_solutions#">HU 40bb PLO w Limp</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-4 col-md-4 fadeInUp filter-plo solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/headsup-tree-cc6c3dd6f384d7be98ec56a298d1134d543bbe9f1bf516e04becbc28ce514aa4.png">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/218" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" style="background: #e1e1e1;">
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/my_solutions#">HU PLO 9bb</a>
+</h4>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row" id="plo5_section" style="width: 100%">
+<div class="col-xs-12 text-center">
+<h6 class="text-muted text-normal text-uppercase pt-2">Plo5</h6>
+<hr class="margin-bottom-1x">
+</div>
+</div>
+<div class="row">
+<div class="col-4 col-md-4 fadeInUp filter-plo5 solution-item wow">
+<div class="solution-wrap panel">
+<figure>
+<img alt="" class="img-fluid" src="./images/hu-tree-13ab7a3441df6c06d00b3e9a33b5cf2ac6ab25939e9c41493fd2ff8a8b94daeb.png">
+<a class="link-details" data-turbolinks="false" href="http://localhost:3000/online/solutions/222" title="Online Browser">
+<span>Browse Solution Online</span>
+</a>
+</figure>
+<div class="solution-info" >
+<h4 style="margin-top:-5px;">
+<a data-turbolinks="false" href="http://localhost:3000/solutions/hu_tree.png?locale=us">HU 40bb 5c PLO</a>
+</h4>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+</div>
+<!-- #solution -->
+</div>
+</div>
+
+<!-- Site Footer -->
+<footer class="site-footer footer" id="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<!-- Contact Info -->
+<section class="widget widget-links widget-light-skin">
+<h3 class="widget-title">Get In Touch With Us</h3>
+<ul>
+<li>
+<a href="mailto:support@rangeconverter.com">support@rangeconverter.com</a>
+</li>
+<li>
+<a href="http://localhost:3000/contact/new?subject=affiliate">Affiliate Program</a>
+</li>
+</ul>
+<div class="row">
+<div class="col xs-12">
+<br>
+<a class="social-button shape-circle sb-twitter sb-light-skin" href="https://twitter.com/rangeconverter">
+  <i class="fa fa-twitter" aria-hidden="true"></i>
+</a>
+<a class="social-button shape-circle sb-instagram sb-light-skin" href="https://youtube.com/rangeconverter">
+  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+</a>
+</div>
+</div>
+</section>
+</div>
+<div class="col-lg-4 col-md-4">
+<!-- About Us -->
+<section class="widget widget-links widget-light-skin">
+<h3 class="widget-title">Private Services</h3>
+<ul>
+<li>
+<a href="http://localhost:3000/solutions/custom_solutions">Custom Solutions</a>
+</li>
+<li>
+<a href="http://localhost:3000/contact/new?subject=software">Custom Software</a>
+</li>
+<li>
+<a href="http://localhost:3000/contact/new?subject=coaching">Coaching</a>
+</li>
+</ul>
+</section>
+</div>
+<div class="col-lg-4 col-md-4">
+<!-- Account / Shipping Info -->
+<section class="widget widget-links widget-light-skin">
+<h3 class="widget-title">Integration</h3>
+<ul>
+<li>
+<a href="http://localhost:3000/contact/new?subject=api">Solution API</a>
+</li>
+<li>
+<a href="http://localhost:3000/contact/new?subject=browser">Embedded Solution Browser</a>
+</li>
+</ul>
+</section>
+</div>
+</div>
+<!-- Copyright -->
+<p class="footer-copyright">
+© All rights reserved RangeConverter.com
+</p>
+</div>
+</footer>
+
+<!-- Back To Top Button -->
+<a class="scroll-to-top-btn" href="http://localhost:3000/my_solutions#">
+<i class="icon-arrow-up"></i>
+</a>
+<!-- Backdrop -->
+<div class="site-backdrop"></div>
+<br>
+
+<iframe name="__privateStripeMetricsController0540" frameborder="0" allowtransparency="true" scrolling="no" allow="payment *" src="./images/m-outer-5564a2ae650989ada0dc7f7250ae34e9.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe></body></html>
